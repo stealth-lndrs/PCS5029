@@ -50,7 +50,8 @@ De acordo com o planejamento da disciplina:contentReference[oaicite:1]{index=1}:
 ## 📚 Material de referência
 
 - **Stanford CS224N**: [NLP with Deep Learning](https://web.stanford.edu/class/cs224n/index.html#schedule)  
-- Slides, artigos e capítulos adicionais indicados em aula no **e-Disciplinas**.  
+- Slides, artigos e capítulos adicionais indicados em aula no **e-Disciplinas**.
+- Link para este repositório: https://github.com/stealth-lndrs/PCS5029/
 
 ---
 
