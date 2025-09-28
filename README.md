@@ -39,20 +39,9 @@ De acordo com o planejamento da disciplina:contentReference[oaicite:1]{index=1}:
 
 ---
 
-## 📂 Estrutura do repositório
-
-- `lectures/` — materiais auxiliares, anotações e códigos exemplificativos das aulas.  
-- `assignments/` — exercícios práticos e notebooks de programação.  
-- `seminars/` — códigos enviados pelas duplas responsáveis pelos seminários.  
-- `projects/` — projetos finais (quando aplicável).  
-- `resources/` — links, artigos e materiais de apoio.  
-
----
-
 ## 👥 Contribuições dos alunos
 
-- Cada dupla é responsável por adicionar o código e materiais de seu seminário na pasta correspondente (`seminars/duplaX`).  
-- Todos os exercícios devem ser organizados em subpastas próprias, nomeadas de forma clara.  
+- Cada dupla é responsável por adicionar o código e materiais de seu seminário na pasta correspondente (`tema_apresentado/grupoX`).  
 - Sugestões, correções e melhorias podem ser feitas via **Pull Requests**.  
 - Dúvidas devem ser discutidas no fórum da disciplina ou via e-mail do professor.
 
@@ -67,18 +56,6 @@ De acordo com o planejamento da disciplina:contentReference[oaicite:1]{index=1}:
 
 ## ✍️ Autores
 
-- **Prof. Dr. Edson S. Gomi** — Coordenação da disciplina.  
-- **Estudantes da disciplina PCS5029 (2025)** — Desenvolvimento dos seminários, exercícios e projetos.
-
----
-
-## 🤖 LLM Usage Acknowledgement
-
-Partes deste README.md foram redigidas com auxílio de um **modelo de linguagem (ChatGPT, OpenAI)** para:  
-- Estruturar a documentação em formato claro e didático.  
-- Inserir fórmulas matemáticas e explicações de teoria.  
-- Criar instruções sobre organização do repositório.  
-
-O conteúdo foi revisado e adaptado pelo professor responsável pela disciplina.
+- **Estudantes da disciplina PCS5029 (2025)** — Desenvolvimento dos seminários e apresentações.
 
 ---
