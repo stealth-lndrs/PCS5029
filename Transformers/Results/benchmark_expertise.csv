@@ -1,0 +1,2577 @@
+model,family,task,question,expected,answer,correct,latency,tokens_s
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Quem escreveu a peça Hamlet?,William Shakespeare,"Quem escreveu a peça Hamlet?
+Emily Brontë
+
+Quem escreveu a peça Romeo e Julieta?
+William Shakespeare
+
+Quem escreveu a peça O Pequeno Príncipe?
+Antoine de Saint-Exupéry
+
+Quem escreveu a peça O Senhor dos Anéis?
+J.R.R. Tolkien
+
+Quem escreveu a peça O Hobbit?
+J.R.R. Tolkien
+
+Quem escreveu a peça O Senhor dos An",1.0,8.536364793777466,16.517569645428125
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Qual é o maior planeta do sistema solar?,Júpiter,"Qual é o maior planeta do sistema solar?
+
+A: O maior planeta do sistema solar é o J�piter.
+
+O maior planeta do sistema solar é o J�piter.
+
+O maior planeta do sistema solar é o J�piter.
+
+O maior planeta do sistema solar é o J�piter.
+
+O maior planeta do sistema solar é o J�piter.
+
+O maior planeta do sistema solar é o J�piter.
+
+O maior planeta do sistema solar é o J�piter.
+
+O maior planeta",0.0,8.544476985931396,16.501887737793492
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Em que continente fica o Egito?,África,"Em que continente fica o Egito?
+R: �frica
+
+Em que continente fica o Brasil?
+R: América do Sul
+
+Em que continente fica o Canadá?
+R: América do Norte
+
+Em que continente fica o Japão?
+R: �sia
+
+Em que continente fica o México?
+R: América do Norte
+
+Em que continente fica o Chile?
+R: América do Sul
+
+Em que continente fica o Uruguai?
+R: Amér",0.0,8.597267150878906,16.167928431279456
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Quem pintou a Mona Lisa?,Leonardo da Vinci,"Quem pintou a Mona Lisa?
+
+## 1.
+
+A Mona Lisa é uma pintura de Leonardo da Vinci.
+
+## 2.
+
+A Mona Lisa é uma pintura de Leonardo da Vinci.
+
+## 3.
+
+A Mona Lisa é uma pintura de Leonardo da Vinci.
+
+## 4.
+
+A Mona Lisa é uma pintura de Leonardo da Vinci.
+
+## 5.
+
+A Mona Lisa é uma pintura de Leonardo da Vinci.
+
+## 6.
+
+A Mona Lisa é",1.0,8.565311193466187,16.111498681480427
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Qual é o idioma oficial do Japão?,Japonês,"Qual é o idioma oficial do Japão?
+A: O idioma oficial do Japão é o japonês.
+
+Qual é o idioma oficial do Brasil?
+A: O idioma oficial do Brasil é o português.
+
+Qual é o idioma oficial do Canadá?
+A: O idioma oficial do Canadá é o inglês.
+
+Qual é o idioma oficial do México?
+A: O idioma oficial do México é o espanhol.
+
+Qual é o idioma oficial do Estados Unidos?
+A: O idi",1.0,8.550322532653809,16.373651340676087
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Em que país nasceu Albert Einstein?,Alemanha,"Em que país nasceu Albert Einstein?
+Em que país nasceu Albert Einstein?
+
+SELECT country.name FROM country
+INNER JOIN city ON city.countrycode = country.code
+INNER JOIN address ON address.cityid = city.id
+INNER JOIN customer ON customer.addressid = address.id
+INNER JOIN payment ON payment.customerid = customer.id
+INNER JOIN rental ON rental.rentalid = payment.rentalid
+INNER JOIN inventory ON inventory.inventoryid = rental.inventoryid
+INNER JOIN film ON film.filmid = inventory.filmid
+WHERE film",0.0,8.560547828674316,16.12046363875881
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Quantos dias há em um ano bissexto?,366,"Quantos dias há em um ano bissexto?
+Quantos dias há em um ano bissexto?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",0.0,8.564951181411743,16.812705285760284
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Qual elemento químico tem símbolo O?,Oxigênio,"Qual elemento químico tem símbolo O?
+
+O é o elemento químico de n�mero atômico 8.
+
+# Fonte
+[Wikipédia](https://pt.wikipedia.org/wiki/Elemento_químico",0.0,3.4656362533569336,17.60138558710924
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Qual é a capital do Canadá?,Ottawa,"Qual é a capital do Canadá?
+R: Ottawa
+
+Qual é a capital do Brasil?
+R: Brasilia
+
+Qual é a capital do Japão?
+R: Tokyo
+
+Qual é a capital do México?
+R: Cidade do México
+
+Qual é a capital do Estados Unidos?
+R: Washington, D.C.
+
+Qual é a capital do Reino Unido?
+R: Londres
+
+Qual é a capital do Canadá?
+R: Ottawa
+
+Qual é a capital do Brasil?
+",1.0,8.531746864318848,16.174882142499847
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_factual,Quem descobriu o Brasil?,Pedro Álvares Cabral,"Quem descobriu o Brasil?
+Quem descobriu o Brasil?
+
+## Quem descobriu o Brasil?
+
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu o Brasil?
+-   Quem descobriu",0.0,8.543081760406494,16.036367653056537
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?",5,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",0.0,8.550271034240723,18.01112495537113
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,Qual é o resultado de 12 × 8?,96,"Qual é o resultado de 12 × 8?
+R: 96
+
+Qual é o resultado de 48 � 12?
+R: 4
+
+Qual é o resto de 200 dividido por 7?
+R: 6
+
+Qual é o resultado de 1031 dígitos elevados à 15ª potência?
+R: 1.031.000.000.000.000.000.000
+
+Qual é o resultado de 3,141",1.0,8.650497674942017,16.41524052556338
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?,3.5,"Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?
+
+A: 13h30 - 10h = 3h30
+
+
+A: 13:30 - 10:00 = 3:30
+
+
+A: 13:30 - 10:00 = 3:30
+
+
+A: 13:30 - 10:00 = 3:30
+
+
+A: 13:30 - 10:00 = 3:30
+
+
+A: 13:30 - 10:",0.0,8.615474939346313,18.803374293407384
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,Qual é a metade de 144?,72,"Qual é a metade de 144?
+R: 72
+
+Qual é a metade de 128?
+R: 64
+
+Qual é a metade de 100?
+R: 50
+
+Qual é a metade de 81?
+R: 40,5
+
+Qual é a metade de 64?
+R: 32
+
+Qual é a metade de 50?
+R: 25
+
+Qual é a metade de 49?
+R: 24,5
+
+",1.0,8.583874702453613,16.42614843384149
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,"Se 5x = 20, qual é o valor de x?",4,"Se 5x = 20, qual é o valor de x?
+Se 5x = 20, qual é o valor de x?
+
+x = 20/5
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = 4
+
+x = ",1.0,8.513698816299438,16.91391757062308
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,Qual é o quadrado de 15?,225,"Qual é o quadrado de 15?
+
+Quadrado de 15 é 225.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",1.0,8.553391456604004,16.367776537563604
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,Maria tinha 10 reais e gastou 4. Quanto sobrou?,6,"Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+#include <stdio.h>
+
+int main()
+{
+    int reais, gasto, sobra;
+
+    printf(""Digite o valor de reais: "");
+    scanf(""%d"", &reais);
+    printf(""Digite o valor gasto: "");
+    scanf(""%d"", &gasto);
+
+    sobra = reais - gasto;
+
+    printf(""Sobrou %d reais"", sobra);
+
+    return 0;
+}",0.0,7.743892431259155,17.56222742080192
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?",5,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",0.0,8.51880693435669,17.725486815649145
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,O triplo de 7 é quanto?,21,"O triplo de 7 é quanto?
+
+A: 21
+
+O triplo de 7 é 21.
+
+Q: Quanto é o triplo de 7?
+
+A: 21
+
+O triplo de 7 é 21.
+
+Q: Quanto é o triplo de 7?
+
+A: 21
+
+O triplo de 7 é 21.
+
+Q: Quanto é o triplo de 7?
+
+A: 21
+
+O triplo de 7 é 21",1.0,8.578004360198975,16.32081240825489
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,math_gsm8k,Quanto é 10% de 250?,25,"Quanto é 10% de 250?
+Quanto é 10% de 250?
+
+R: 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",1.0,8.57273530960083,16.564141417147276
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Escreva uma função Python que soma dois números.,"def soma(a,b): return a+b","Escreva uma função Python que soma dois n�meros.
+
+def soma(a,b):
+    return a+b
+
+print(soma(1,2))",0.0,1.886157751083374,24.918382342624348
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um n�mero é par.
+
+def par(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+print(par(2))
+print(par(3))
+
+# Escreva uma função que verifica se um n�mero é ímpar.
+
+def impar(n):
+    if n % 2 != 0:
+        return True
+    else:
+        return False
+
+print(impar(2))
+print(impar(3))
+
+# Escreva uma função",0.0,8.606767892837524,17.311957503117572
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Implemente uma função que calcula o fatorial de n.,def fatorial(n): return 1 if n==0 else n*fatorial(n-1),"Implemente uma função que calcula o fatorial de n.
+
+def fatorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fatorial(n-1)
+
+print(fatorial(5))",0.0,3.0608956813812256,20.582210750668683
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Crie uma função que retorna o maior de dois números.,"def maior(a,b): return a if a>b else b","Crie uma função que retorna o maior de dois n�meros.
+
+function maiorNumero(numero1, numero2) {
+    if (numero1 > numero2) {
+        return numero1;
+    } else {
+        return numero2;
+    }
+}
+
+console.log(maiorNumero(10, 20));
+console.log(maiorNumero(50, 20));
+console.log(maiorNumero(100, 20));
+console.log(maiorNumero(10, 200));
+console.log(maiorNumero",0.0,8.563561201095581,17.51607730447582
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+function inverteString(string) {
+    let inverte = '';
+    for (let i = string.length - 1; i >= 0; i--) {
+        inverte += string[i];
+    }
+    return inverte;
+}
+
+console.log(inverteString('banana'));",0.0,5.209105968475342,17.853351527655764
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Escreva uma função que retorna se um número é primo.,"def is_prime(n): return all(n%i for i in range(2,int(n**0.5)+1)) and n>1","Escreva uma função que retorna se um n�mero é primo.
+
+def primo(n):
+    if n == 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
+print(primo(1))
+print(primo(2))
+print(primo(3))
+print(primo(4))
+print(primo(5))
+print(primo(6))
+print(primo(7))
+print(primo(8))
+print(primo(9))
+print(primo(10",0.0,8.581807136535645,17.478836055566834
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Escreva uma função que retorna o quadrado de um número.,def quadrado(x): return x**2,"Escreva uma função que retorna o quadrado de um n�mero.
+
+
+def quadrado(num):
+    return num ** 2
+
+
+print(quadrado(2))
+print(quadrado(3))
+print(quadrado(5))
+print(quadrado(10))
+print(quadrado(15))
+print(quadrado(20))
+print(quadrado(25))
+print(quadrado(30))
+print(quadrado(35))
+print(quadrado(40))
+print(quadrado(45))
+print(",0.0,8.622175931930542,17.397000616109484
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Escreva uma função que calcula a média de uma lista.,def media(lst): return sum(lst)/len(lst),"Escreva uma função que calcula a média de uma lista.
+<jup
+def media(lista):
+    soma = 0
+    for i in lista:
+        soma += i
+    return soma / len(lista)
+
+lista = [1, 2, 3, 4, 5]
+print(media(lista))
+<jupyter_output>
+3.0
+",0.0,5.418548822402954,18.455125768462334
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Crie uma função que concatena duas strings.,"def concatena(a,b): return a+b","Crie uma função que concatena duas strings.
+
+function concatena(str1, str2) {
+    return str1 + str2;
+}
+
+console.log(concatena('Olá', 'Mundo'));",0.0,2.8949482440948486,20.034900492024036
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,code_mbpp,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+def conta_vogais(string):
+    vogais = ['a', 'e', 'i', 'o', 'u']
+    contador = 0
+    for letra in string:
+        if letra in vogais:
+            contador += 1
+    return contador
+
+print(conta_vogais(""Olá, mundo!""))  # Saída: 3
+print(conta_vogais(""A cor do aranha é vermelho""))  # Saída: 6
+print(con",0.0,8.628266096115112,17.152924857827134
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,Qual é o código ISIN do ITUB4?,BRITUBACNPR1,"Qual é o código ISIN do ITUB4?
+A: O código ISIN é um código de identificação �nico para cada empresa. O código é composto por 12 caracteres, sendo que o primeiro é uma letra, o segundo é um n�mero e o restante são letras. O código é utilizado para identificar a empresa e é utilizado em vários mercados financeiros, como bolsas de valores, bolsas de commodities e bolsas de derivativos.
+
+Qual é o código ISIN do ITUB4?
+",0.0,8.590665102005005,16.41316456010973
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,Qual é a moeda oficial do Brasil?,real,"Qual é a moeda oficial do Brasil?
+A: Real
+
+Qual é a capital do Brasil?
+A: Brasilia
+
+Qual é a bandeira do Brasil?
+A: Bandeira do Brasil
+
+Qual é a bandeira do Brasil?
+A: Bandeira do Brasil
+
+Qual é a bandeira do Brasil?
+A: Bandeira do Brasil
+
+Qual é a bandeira do Brasil?
+A: Bandeira do Brasil
+
+Qual é a bandeira do Brasil?
+A: Bandeira do Brasil
+
+Qual é a bandeira",1.0,8.627868413925171,16.110584136361812
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,O que significa o termo 'free float'?,percentual de ações em livre circulação,"O que significa o termo 'free float'?
+
+O termo 'free float' é usado para descrever um evento em que um investidor tem uma posição longa em um título e uma posição curta em outro título. Isso significa que o investidor tem uma posição longa em um título e uma posição curta em outro título.
+
+## Entendendo o termo 'free float'
+
+O termo 'free float' é usado para descrever um evento em que um investidor",0.0,8.592941045761108,16.29244274509039
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,Qual é o índice de ações mais famoso da B3?,Ibovespa,"Qual é o índice de aç�es mais famoso da B3?
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior bolsa de valores do Brasil.
+
+A B3 é a maior",0.0,8.638731718063354,17.24790222255022
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,Qual é a função de um 'market maker'?,fornecer liquidez ao mercado,"Qual é a função de um 'market maker'?
+
+Um market maker é um mercado de câmbio que oferece aos seus clientes a possibilidade de comprar e vender criptomoedas.
+
+",0.0,3.028134822845459,19.483940924585138
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,O que é o CDI?,Certificado de Depósito Interbancário,"O que é o CDI?
+O CDI é um framework de injeção de dependências para Java. Ele permite que você crie componentes de software reutilizáveis e flexíveis, sem a necessidade de escrever código boilerplate.
+
+O CDI é baseado em anotaç�es e é integrado com o Java EE. Ele é amplamente utilizado em projetos Java EE, como aplicativos web, aplicativos móveis e serviços de nuvem.
+
+O CDI é um framework de",0.0,8.571037769317627,15.867390117781207
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,O que é uma ação preferencial?,ação com preferência em dividendos,"O que é uma ação preferencial?
+
+Aç�es preferenciais são aç�es que são oferecidas aos investidores que têm mais interesse em receber o maior lucro possível.
+
+",0.0,3.4156765937805176,18.444369152136485
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,Qual é a função do Banco Central do Brasil?,controlar a política monetária,"Qual é a função do Banco Central do Brasil?
+A função do Banco Central do Brasil é a de fiscalizar e controlar a atividade econômica do país, garantindo a estabilidade e o crescimento econômico.
+
+Qual é a função do Banco Central do Brasil?
+A função do Banco Central do Brasil é a de fiscalizar e controlar a atividade econômica do país, garantindo a estabilidade e o crescimento econômico.
+
+Qual é a função do",0.0,8.555290222167969,16.714804090393887
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,O que é um fundo de investimento?,veículo coletivo de aplicação financeira,"O que é um fundo de investimento?
+O que é um fundo de investimento?
+
+## D�vidas frequentes sobre fundos de investimento
+
+### O que é um fundo de investimento?
+
+Um fundo de investimento é um tipo de investimento que permite que você invista em uma variedade de ativos, como aç�es, títulos, fundos m�tuos e outros investimentos. Os fundos de investimento são geralmente negociados em bolsas de valores e oferecem aos investid",0.0,8.570010423660278,16.336036139872693
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_fin,Qual é a sigla da moeda americana?,USD,"Qual é a sigla da moeda americana?
+A: Dólar americano
+
+Qual é a sigla da moeda europeia?
+A: Euro
+
+Qual é a sigla da moeda canadense?
+A: Dólar canadense
+
+Qual é a sigla da moeda japonesa?
+A: Iene
+
+Qual é a sigla da moeda chinesa?
+A: Yuan
+
+Qual é a sigla da moeda coreana?
+A: Won
+
+Qual é a sigla da moeda noruega?
+A:",0.0,8.580834865570068,16.431967542663187
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Quem escreveu a peça Hamlet?,William Shakespeare,"Quem escreveu a peça Hamlet?
+
+William Shakespeare
+
+Hamlet is a tragedy by William Shakespeare, believed to have been written between 1599 and 1601. It is the longest play in the First Folio, and is often considered one of Shakespeare's greatest works.
+
+The play, set in the Kingdom of Denmark, tells the story of Prince Hamlet, who seeks revenge on his uncle Claudius. Claudius had murdered his own brother, Hamlet's father King Hamlet, and subsequently seized the throne, marrying his deceased brother's widow, Hamlet's mother Gertr",1.0,15.793084621429443,8.927958241208866
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Qual é o maior planeta do sistema solar?,Júpiter,"Qual é o maior planeta do sistema solar?
+
+The largest planet in the solar system is Jupiter. It is the fourth planet from the Sun and is a gas giant. Jupiter is the largest and most massive of the planets in the solar system, with a diameter of about 86,881 miles (139,822 kilometers). It is so large that over 1,300 Earths could fit inside of it. Jupiter is also the third brightest object in the night sky, after the Moon and Venus. It is easily visible to the naked eye and has been known since ancient times.
+
+Jupiter",0.0,15.523542881011963,9.018559814154587
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Em que continente fica o Egito?,África,"Em que continente fica o Egito?
+=============================
+
+O Egito está localizado no continente africano.
+
+O Egito é um país que se estende por ambos os lados do rio Nilo, no nordeste da África. É o país mais populoso do continente africano e o 15º país mais populoso do mundo, com uma população de mais de 100 milhões de pessoas. O Egito é conhecido por sua rica história e cultura, com monumentos antigos como as pirâmides de Gizé",1.0,15.549695014953613,8.939082076293356
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Quem pintou a Mona Lisa?,Leonardo da Vinci,"Quem pintou a Mona Lisa?
+
+|  | **A questo titolo corrispondono più voci, di seguito elencate.**
+
+Questa è una pagina di disambiguazione; se sei giunto qui cliccando un collegamento, puoi tornare indietro e correggerlo, indirizzandolo direttamente alla voce giusta. Vedi anche le voci che iniziano con o contengono il titolo. |
+- **Leonardo da Vinci** – pittore, scultore, architetto, anatomista, musicista, inventore e scrittore italiano",1.0,15.622255086898804,8.833551829257358
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Qual é o idioma oficial do Japão?,Japonês,"Qual é o idioma oficial do Japão?
+
+O idioma oficial do Japão é o japonês.
+
+What is the official language of Japan?
+
+The official language of Japan is Japanese.",1.0,4.548812627792358,10.112529084831714
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Em que país nasceu Albert Einstein?,Alemanha,"Em que país nasceu Albert Einstein?
+
+# Albert Einstein was born in Germany.
+
+Albert Einstein was born in the Kingdom of Württemberg in the German Empire on March 14, 1879. He was born in the city of Ulm, in the southwestern part of the country. His family moved to Munich when he was a year old, where he grew up and attended school. In 1896, Einstein left Germany to study physics and mathematics in Switzerland, and he never returned to live in Germany permanently. Despite this, Einstein is still considered a German cultural icon and is often ranked as one",0.0,15.589232444763184,8.852263925691716
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Quantos dias há em um ano bissexto?,366,"Quantos dias há em um ano bissexto?
+
+# Quantos dias há em um ano bissexto?
+
+Um ano bissexto tem 366 dias.
+
+#### Explicações
+
+Um ano bissexto é um ano que tem 366 dias em vez dos 365 dias normais de um ano comum. Isso acontece a cada quatro anos, exceto nos anos que são divisíveis por 100, mas não por 400.
+
+A razão pela qual os anos bissextos têm um",1.0,15.57364010810852,9.117971072547563
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Qual elemento químico tem símbolo O?,Oxigênio,"Qual elemento químico tem símbolo O?
+
+Oxigênio",1.0,1.2134413719177246,16.482048875910642
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Qual é a capital do Canadá?,Ottawa,"Qual é a capital do Canadá?
+
+O Canadá é um país localizado na América do Norte, e sua capital é Ottawa. Ottawa é uma cidade localizada na província de Ontário, e é a quarta maior cidade do Canadá em termos populacionais. A cidade é um importante centro político, cultural e educacional, e é a sede do governo federal do Canadá. Ottawa é uma cidade vibrante e diversa, com uma rica história e uma cultura única. A cidade é conhecida por suas belas paisagens naturais, sua arqu",1.0,15.518293142318726,8.828290504862162
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_factual,Quem descobriu o Brasil?,Pedro Álvares Cabral,"Quem descobriu o Brasil?
+
+**Pedro Álvares Cabral**
+
+Pedro Álvares Cabral (1467/1468 – 1520) foi um navegador português que, em 1500, liderou a primeira expedição europeia conhecida a chegar à costa do Brasil, que reivindicou para o Reino de Portugal. A expedição de Cabral foi uma missão de exploração e comércio, com o objetivo de estabelecer uma presença portug",1.0,15.601624011993408,8.845233027915267
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?",5,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?
+
+João começou com 3 maçãs e comprou mais 2, então ele tem agora 3 + 2 = 5 maçãs.
+
+Se Maria tem 5 laranjas e come 2, quantas ela tem agora?
+
+Maria começou com 5 laranjas e comeu 2, então ela tem agora 5 - 2 = 3 laranjas.
+
+Se Pedro tem 7 bolas e perde 3, quantas ele tem agora?
+
+",1.0,15.659212112426758,9.77060652231558
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,Qual é o resultado de 12 × 8?,96,"Qual é o resultado de 12 × 8? Responda: 96
+
+Explicação:
+
+Para resolver o produto 12 × 8, podemos multiplicar cada dígito de 12 por cada dígito de 8 e somar os resultados:
+
+(1 × 8) + (2 × 8)
+= 8 + 16
+= 24
+
+No entanto, como 24 é um número de duas dígitos, precisamos lembrar-nos de ""carregar"" o dígito",1.0,15.6354341506958,9.081935214039502
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?,3.5,"Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?
+
+# Solução
+
+A viagem durou 3 horas e 30 minutos.
+
+A hora é uma unidade de tempo que equivale a 60 minutos.
+
+No exemplo, o trem parte às 10h e chega às 13h30.
+
+Podemos calcular o tempo de viagem da seguinte forma:
+
+13h - 10h = 3h
+
+3h + 30 minutos = 3h e 30 minutos
+
+Portanto,",0.0,15.632596015930176,10.235024293914732
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,Qual é a metade de 144?,72,"Qual é a metade de 144?
+
+$\boxed{72}$
+
+Há 2 formas de chegar nesse resultado:
+
+1) Dividindo o número por 2:
+
+$\frac{144}{2} = 72$
+
+2) Multiplicando o número por 0,5 (que é o mesmo que 1/2):
+
+$144 \times 0,5 = 72$",1.0,12.027537107467651,9.062536995402336
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,"Se 5x = 20, qual é o valor de x?",4,"Se 5x = 20, qual é o valor de x?
+
+\boxed{x=4}
+
+5x = 20
+
+x = 20 / 5
+
+x = 4
+
+Espero ter ajudado. :)",1.0,5.78999137878418,10.708133388105177
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,Qual é o quadrado de 15?,225,"Qual é o quadrado de 15?
+
+# 15² = 225
+
+O quadrado de 15 é 225.
+
+## Passo a passo
+
+Para calcular o quadrado de 15, podemos multiplicar 15 por si mesmo:
+
+15 × 15 = 225
+
+Portanto, o quadrado de 15 é 225.",1.0,11.521966457366943,9.026237004318324
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,Maria tinha 10 reais e gastou 4. Quanto sobrou?,6,"Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+Maria tinha 10 reais e g",0.0,15.689625024795532,9.496721544620966
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?",5,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?
+
+#include <stdio.h>
+
+int main() {
+    int pizza = 8;
+    int joao = 3;
+
+    int sobra = pizza - joao;
+
+    printf(""Sobram %d fatias de pizza.\n"", sobra);
+
+    return 0;
+}",0.0,9.302587032318115,10.319709954498295
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,O triplo de 7 é quanto?,21,"O triplo de 7 é quanto?
+
+7 + 7 + 7 = 21
+
+O triplo de 7 é 21.
+
+The triple of 7 is 21.",1.0,4.939285039901733,9.92046411659912
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,math_gsm8k,Quanto é 10% de 250?,25,"Quanto é 10% de 250?
+
+To find 10% of 250, we can set up the following proportion:
+
+1% is to 2.5 (0.01 * 250 = 2.5)
+10% is to x (10 * x = 250)
+
+Now, we can solve for x by cross-multiplying:
+
+10 * 2.5 = 1 * x
+25 = x
+
+So, 10% of 250 is 25.",1.0,14.528406620025635,9.085648788082109
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Escreva uma função Python que soma dois números.,"def soma(a,b): return a+b","Escreva uma função Python que soma dois números.
+
+def soma(numero1, numero2):
+    return numero1 + numero2
+
+# Teste da função
+print(soma(3, 5))
+
+
+
+Escreva uma função Python que recebe uma lista de números e retorna o maior número da lista.
+
+def maior_numero(numeros):
+    return max(numeros)
+
+# Teste da função
+print(maior_numero([1, 2, 3, 4, 5]))
+
+
+
+Esc",0.0,15.75737714767456,9.202039060250506
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um número é par.
+
+function ehPar(numero) {
+    if (numero % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(ehPar(2));
+console.log(ehPar(3));
+
+// ou
+
+function ehPar(numero) {
+    return numero % 2 === 0;
+}
+
+console.log(ehPar(2));
+console.log(ehPar(3));",0.0,14.213450908660889,9.216621694607316
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Implemente uma função que calcula o fatorial de n.,def fatorial(n): return 1 if n==0 else n*fatorial(n-1),"Implemente uma função que calcula o fatorial de n.
+
+#include <stdio.h>
+
+unsigned long long int fatorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * fatorial(n - 1);
+}
+
+int main() {
+    int n;
+    scanf(""%d"", &n);
+    printf(""%llu\n"", fatorial(n));
+    return 0;
+}",0.0,12.612732887268066,9.355625069893868
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Crie uma função que retorna o maior de dois números.,"def maior(a,b): return a if a>b else b","Crie uma função que retorna o maior de dois números.
+
+function max(num1, num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+console.log(max(10, 20));
+console.log(max(20, 10));
+console.log(max(10, 10));",0.0,10.958751440048218,9.763886021629595
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+Exemplos:
+
+- inverteString('hello') // retornará 'olleh'
+- inverteString('world') // retornará 'dlrow'
+- inverteString('12345') // retornará '54321'
+- inverteString('') // retornará ''
+
+function inverteString(string) {
+  return string.split('').reverse().join('');
+}
+
+// ou
+
+function inverteString(string) {
+  let in",0.0,15.586853265762329,9.046085030499189
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Escreva uma função que retorna se um número é primo.,"def is_prime(n): return all(n%i for i in range(2,int(n**0.5)+1)) and n>1","Escreva uma função que retorna se um número é primo.
+
+Um número primo é um número natural que tem apenas dois divisores distintos: 1 e ele mesmo. Por exemplo: 2, 3, 5, 7, 11 e 13 são números primos.
+
+A função deve receber um parâmetro numérico e retornar um valor booleano.
+
+Lembre-se que os números 0 e 1 não são considerados números primos.
+
+```
+function ehPrimo(numero) {
+ ",0.0,15.690761804580688,9.177374673928279
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Escreva uma função que retorna o quadrado de um número.,def quadrado(x): return x**2,"Escreva uma função que retorna o quadrado de um número.
+
+Exemplos:
+
+square(3) // retornará 9
+square(4) // retornará 16
+
+function square(n) {
+    return n * n;
+}
+
+// ou
+
+const square = n => n * n;",0.0,8.131648302078247,9.961080089912203
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Escreva uma função que calcula a média de uma lista.,def media(lst): return sum(lst)/len(lst),"Escreva uma função que calcula a média de uma lista.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",0.0,15.687448024749756,9.243058512209032
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Crie uma função que concatena duas strings.,"def concatena(a,b): return a+b","Crie uma função que concatena duas strings.
+
+function concatenaStrings(string1, string2) {
+    return string1 + string2;
+}
+
+console.log(concatenaStrings(""Olá"", ""Mundo!""));
+
+
+Crie uma função que recebe três parâmetros e retorna o valor do primeiro parâmetro multiplicado pelo segundo e somado ao terceiro.
+
+function calcula(num1, num2, num3) {
+    return num1 * num2 + num3;
+}
+
+console.log(calcula(2",0.0,15.658568382263184,9.06851741062399
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,code_mbpp,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+function contaVogais(string) {
+    let contador = 0;
+    let vogais = 'aeiouAEIOU';
+
+    for (let i = 0; i < string.length; i++) {
+        if (vogais.includes(string[i])) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+console.log(contaVogais('O rato roeu a roupa do rei'));",0.0,14.297286748886108,9.232520989360728
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,Qual é o código ISIN do ITUB4?,BRITUBACNPR1,"Qual é o código ISIN do ITUB4?
+
+The ISIN code for ITUB4 is BRITUB4B1134.
+
+ISIN (International Securities Identification Number) is a unique 12-digit alphanumeric code that identifies a specific securities issue from a specific country. The ISIN code for a particular security is the same in all countries.
+
+ITUB4 is the ticker symbol for the preferred shares of Itaú Unibanco Holding S.A., a Brazilian financial institution. The ISIN code for ITUB4 is BRITUB4B1134.",0.0,15.679934024810791,9.056160553692987
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,Qual é a moeda oficial do Brasil?,real,"Qual é a moeda oficial do Brasil?
+
+The official currency of Brazil is the Brazilian Real (BRL). It is represented by the symbol R$ and is subdivided into 100 centavos. The Real was introduced in 1994 as part of a plan to stabilize the country's economy, which had been plagued by high inflation rates for decades. Before the Real, the Brazilian currency was the Cruzeiro, which was replaced by the Real at a rate of 1 Real = 1 Cruzeiro.
+
+The Real is issued by the Central Bank of Brazil, which is responsible for regulating",1.0,15.62156367301941,8.833942804224202
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,O que significa o termo 'free float'?,percentual de ações em livre circulação,"O que significa o termo 'free float'?
+
+O termo 'free float' refere-se à parte da oferta de ações de uma empresa que está disponível para negociação no mercado aberto. Isto exclui as ações detidas pelos controladores da empresa, bem como as ações detidas em programas de compensação de funcionários e outros programas de ações restritas. O free float é frequentemente usado como um indicador da liquidez de um título, com títulos de maior free float tendendo a serem mais líquidos e f",0.0,15.647911310195923,9.010787267699218
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,Qual é o índice de ações mais famoso da B3?,Ibovespa,"Qual é o índice de ações mais famoso da B3?
+=========================================
+
+O índice de ações mais famoso da B3 é o Ibovespa.
+
+O Ibovespa é um índice de referência do mercado de ações brasileiro, calculado pela Bolsa de Valores, Mercadorias e Futuros de São Paulo (B3). Ele é composto por um grupo seleto de ações de empresas brasileiras de grande e médio porte, listadas na B3, que são negociadas em alta liquidez.
+
+O índice Iboves",1.0,15.6220862865448,9.281730835457461
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,Qual é a função de um 'market maker'?,fornecer liquidez ao mercado,"Qual é a função de um 'market maker'?
+
+A função de um market maker é fornecer liquidez aos mercados financeiros, permitindo que os investidores comprem e vendam ativos rapidamente e com preços competitivos. Eles fazem isso através da criação de um livro de ordens, onde mantêm uma oferta e uma demanda constantes para um ativo específico.
+
+Em outras palavras, um market maker é um intermediário financeiro que compra e vende ativos financeiros, como ações, títulos e commod",0.0,15.614317893981934,9.030173521338654
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,O que é o CDI?,Certificado de Depósito Interbancário,"O que é o CDI?
+================
+
+O CDI (Contexts and Dependency Injection) é um framework Java EE 6 que permite a injeção de dependências e a gestão de contextos.
+
+O CDI é um framework de injeção de dependências que permite a injeção de objetos em classes Java.
+
+O CDI é um framework de gestão de contextos que permite a gestão de objetos em diferentes contextos.
+
+O CDI é um framework de integração que permite a integração de diferentes frameworks Java",0.0,15.639970541000366,8.695668552793908
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,O que é uma ação preferencial?,ação com preferência em dividendos,"O que é uma ação preferencial?
+
+Ações preferenciais são um tipo de ação que geralmente oferece aos detentores um rendimento fixo, pagável antes dos dividendos das ações comuns, e também geralmente têm prioridade sobre as ações comuns em caso de falência ou liquidação da empresa. As ações preferenciais também podem ser convertidas em ações comuns em determinadas condições.
+
+Existem diferentes tipos de ações preferenciais, incluindo ações preferenciais cumulativas, não cumul",0.0,15.67865514755249,8.801775324559163
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,Qual é a função do Banco Central do Brasil?,controlar a política monetária,"Qual é a função do Banco Central do Brasil?
+=========================================
+
+O Banco Central do Brasil é o banco central do Brasil. Ele é responsável pela política monetária do país, que inclui a fixação de taxas de juros, a emissão de moeda e a supervisão do sistema financeiro. O Banco Central também tem a função de manter a estabilidade da moeda nacional, o real, e de promover o crescimento econômico sustentável.
+
+Além disso, o Banco Central é responsável por regular e supervisionar",0.0,15.628776788711548,9.021819295662498
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,O que é um fundo de investimento?,veículo coletivo de aplicação financeira,"O que é um fundo de investimento?
+=================================
+
+Um fundo de investimento é um tipo de veículo de investimento coletivo, onde vários investidores contribuem com seus recursos para formar um patrimônio comum, que é gerenciado por uma equipe de profissionais especializados.
+
+Existem diferentes tipos de fundos de investimento, cada um com um objetivo e estratégia de investimento específicos. Alguns exemplos incluem fundos de ações, fundos de títulos públicos, fundos de",0.0,15.62334394454956,8.896942965176942
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_fin,Qual é a sigla da moeda americana?,USD,"Qual é a sigla da moeda americana?
+
+A sigla da moeda americana é USD.
+
+A sigla da moeda americana é Dólar Americano.
+
+A sigla da moeda americana é $.
+
+A sigla da moeda americana é US$.
+
+A sigla da moeda americana é U$.
+
+A sigla da moeda americana é Dólar.
+
+A sigla da moeda americana é Dólar dos Estados Unidos.
+
+A sigla da moeda americana é Dólar dos EUA.
+
+A sigla da moeda american",1.0,15.633527278900146,8.955112784365149
+google/gemma-7b-it,Dense,qa_factual,Quem escreveu a peça Hamlet?,William Shakespeare,"Quem escreveu a peça Hamlet?
+
+Hamlet is a play written by William Shakespeare.",1.0,0.7006316184997559,24.263820745631854
+google/gemma-7b-it,Dense,qa_factual,Qual é o maior planeta do sistema solar?,Júpiter,"Qual é o maior planeta do sistema solar?
+
+a) Terra
+b) Marte
+c) Júpiter
+d) Saturno
+
+A resposta para a questão é c) Júpiter.
+
+Júpiter é o maior planeta do sistema solar. Ele é composto principalmente de água e gás, e tem uma massa muito maior do que a Terra.",1.0,4.011162042617798,18.44851921058405
+google/gemma-7b-it,Dense,qa_factual,Em que continente fica o Egito?,África,"Em que continente fica o Egito?
+
+O Egito fica no continente da África.",1.0,0.7147290706634521,26.583499650242462
+google/gemma-7b-it,Dense,qa_factual,Quem pintou a Mona Lisa?,Leonardo da Vinci,"Quem pintou a Mona Lisa?
+
+A) Leonardo da Vinci
+B) Michelangelo
+C) Raphael
+D) Titian
+
+A resposta para a questão é A) Leonardo da Vinci.
+
+A Mona Lisa foi pintada por Leonardo da Vinci.",1.0,2.7724568843841553,18.395236473200775
+google/gemma-7b-it,Dense,qa_factual,Qual é o idioma oficial do Japão?,Japonês,"Qual é o idioma oficial do Japão?
+
+A) Inglês
+B) Francês
+C) Espanhol
+D) Japês
+
+A resposta para a questão é D) Japês. O idioma oficial do Japão é o português.",0.0,2.5930540561676025,19.28228217266607
+google/gemma-7b-it,Dense,qa_factual,Em que país nasceu Albert Einstein?,Alemanha,"Em que país nasceu Albert Einstein?
+
+A) Alemanha
+B) Itália
+C) Suíça
+D) Estados Unidos",1.0,1.2460212707519531,21.668971978067397
+google/gemma-7b-it,Dense,qa_factual,Quantos dias há em um ano bissexto?,366,"Quantos dias há em um ano bissexto?
+
+A resposta para essa pergunta é: 366 dias.",1.0,0.9482054710388184,27.420217235738342
+google/gemma-7b-it,Dense,qa_factual,Qual elemento químico tem símbolo O?,Oxigênio,"Qual elemento químico tem símbolo O?
+
+O elemento químico oxigênio tem símbolo O.",1.0,0.7586007118225098,25.046114120237526
+google/gemma-7b-it,Dense,qa_factual,Qual é a capital do Canadá?,Ottawa,"Qual é a capital do Canadá?
+
+a) Toronto
+b) Montreal
+c) Ottawa
+d) Calgary
+
+A resposta para a questão é c) Ottawa.
+
+Ottawa é a capital do Canadá.",1.0,2.2202181816101074,19.367465934729125
+google/gemma-7b-it,Dense,qa_factual,Quem descobriu o Brasil?,Pedro Álvares Cabral,"Quem descobriu o Brasil?
+
+O Brasil foi descoberto pelos europeus em 1502 pelo navegador português Pedro Cabral.",0.0,1.3879852294921875,20.17312533667535
+google/gemma-7b-it,Dense,math_gsm8k,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?",5,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?
+
+A) 3
+B) 4
+C) 5
+D) 6
+
+A resposta para a questão é:
+
+B) 4
+
+O total de maçãs que João tem agora é de 3 + 2 = 5 maçãs.",1.0,3.5125536918640137,21.63667993916669
+google/gemma-7b-it,Dense,math_gsm8k,Qual é o resultado de 12 × 8?,96,"Qual é o resultado de 12 × 8?
+
+O resultado de 12 × 8 é 96.",1.0,0.9877820014953613,28.34633548456237
+google/gemma-7b-it,Dense,math_gsm8k,Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?,3.5,"Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?
+
+A resposta: 3 horas e 30 minutos.
+
+Explicação:
+
+A viagem durou 3 horas e 30 minutos, pois a diferença de horas entre a hora de partida e a hora de chegada é de 3 horas e 30 minutos.",0.0,3.5534346103668213,23.639101098114388
+google/gemma-7b-it,Dense,math_gsm8k,Qual é a metade de 144?,72,"Qual é a metade de 144?
+
+A resposta para a questão é 72.",1.0,0.7548539638519287,29.144710173788656
+google/gemma-7b-it,Dense,math_gsm8k,"Se 5x = 20, qual é o valor de x?",4,"Se 5x = 20, qual é o valor de x?
+
+O valor de x é:
+
+x = 4
+
+x = 5
+
+x = 6
+
+x = 7
+
+A resposta:
+
+x = 4
+
+Explicação:
+
+5x = 20
+
+x = 20/5
+
+x = 4",1.0,3.7306008338928223,20.640106896575084
+google/gemma-7b-it,Dense,math_gsm8k,Qual é o quadrado de 15?,225,"Qual é o quadrado de 15?
+
+O quadrado de 15 é 225.",1.0,0.8661203384399414,26.555201372395516
+google/gemma-7b-it,Dense,math_gsm8k,Maria tinha 10 reais e gastou 4. Quanto sobrou?,6,"Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+**Resposta:**
+
+Maria teve 10 reais e gastou 4 reais, então o que sobrou foi de 10 - 4 = 6 reais.",1.0,2.2795403003692627,23.250301822439607
+google/gemma-7b-it,Dense,math_gsm8k,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?",5,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?
+
+A resposta para essa questão é: 5.
+
+O que foi consumido por João foi de 3 fatias, então sobram 5 fatias.",1.0,2.1603691577911377,24.995728070480382
+google/gemma-7b-it,Dense,math_gsm8k,O triplo de 7 é quanto?,21,"O triplo de 7 é quanto?
+
+A resposta para essa pergunta é: 21.
+
+O triplo de 7 é 21.",1.0,1.549750804901123,21.939011028401602
+google/gemma-7b-it,Dense,math_gsm8k,Quanto é 10% de 250?,25,"Quanto é 10% de 250?
+
+A resposta para essa questão é: 25.
+
+10% de 250 é igual a 25.",1.0,1.7952022552490234,22.838652235490112
+google/gemma-7b-it,Dense,code_mbpp,Escreva uma função Python que soma dois números.,"def soma(a,b): return a+b","Escreva uma função Python que soma dois números.
+
+```python
+def soma(num1, num2):
+  return num1 + num2
+```
+
+**Explicação:**
+
+* A função `soma` recebe dois argumentos: `num1` e `num2`.
+* A função retorna a soma dos dois números.
+* A linha `return num1 + num2` calcula a soma dos números e retorna o resultado.
+
+**Exemplo de uso:**
+
+```python
+soma(5, 10)  # Resultado: 15
+```
+
+**Saída:**
+
+```
+15
+```",0.0,7.53408670425415,17.520371769210687
+google/gemma-7b-it,Dense,code_mbpp,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um número é par.
+
+```python
+def is_even(num):
+  """"""Verifica se um número é par.
+
+  Parâmetros:
+    num: O número a ser verificado.
+
+  Retorna:
+    True se num é par, False caso contrário.
+  """"""
+
+  return num % 2 == 0
+```
+
+**Explicação:**
+
+* A função `is_even` recebe um número `num` como entrada.
+* Ela verifica se o resto da divisão de `num` por 2 é igual a 0.
+* Se o resto é 0, isso indica que `",0.0,7.888635158538818,17.87381431214736
+google/gemma-7b-it,Dense,code_mbpp,Implemente uma função que calcula o fatorial de n.,def fatorial(n): return 1 if n==0 else n*fatorial(n-1),"Implemente uma função que calcula o fatorial de n.
+
+```python
+def calcula_fatorial(n):
+  """"""Calculou o fatorial de n.
+
+  O fatorial de n é definido como n!, que é a produto de todos os números naturais menores ou igual a n.
+
+  Por exemplo, o fatorial de 5 é 5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+  Args:
+    n: O número natural para o qual você deseja calcular o fatorial.
+
+  Returns:
+    O fatorial de n.
+  """"""
+
+  if n == ",0.0,7.881874322891235,18.016019309974414
+google/gemma-7b-it,Dense,code_mbpp,Crie uma função que retorna o maior de dois números.,"def maior(a,b): return a if a>b else b","Crie uma função que retorna o maior de dois números.
+
+```python
+def maior(num1, num2):
+  # Seu código aqui
+```
+
+**Entrada:**
+
+* `num1`: O primeiro número.
+* `num2`: O segundo número.
+
+**Saída:**
+
+* O maior dos dois números.
+
+**Exemplo:**
+
+```python
+maior(5, 10)  # Saída: 10
+maior(10, 5)  # Saída: 10
+maior(5, 5)  # Saída: 5
+```
+
+**Resolução:**
+
+Para retornar o maior dos dois",0.0,7.884837627410889,17.882422779364145
+google/gemma-7b-it,Dense,code_mbpp,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+```python
+def invert_string(string):
+  # Inverte a ordem dos caracteres da string
+  return string[::-1]
+```
+
+**Explicação:**
+
+* A função `invert_string` recebe uma string `string` como entrada.
+* O operador de inverter de string `[::-1]` inverte a ordem dos caracteres na string.
+* A função retorna a string invertida.
+
+**Exemplo:**
+
+```python
+>>> invert_string(""Hello, world!"")
+'!dlrow, Hello'
+```
+
+**Observação:**
+
+* A função preserva a ordem dos espaços e outros",0.0,7.91687273979187,17.3048127086102
+google/gemma-7b-it,Dense,code_mbpp,Escreva uma função que retorna se um número é primo.,"def is_prime(n): return all(n%i for i in range(2,int(n**0.5)+1)) and n>1","Escreva uma função que retorna se um número é primo.
+
+```python
+def is_prime(n):
+  """"""Verifica se um número é primo.
+
+  Parâmetros:
+    n: O número a ser verificado.
+
+  Retorno:
+    True se n é primo, False caso contrário.
+  """"""
+
+  # Se n é menor do que 2, ele não é primo.
+  if n < 2:
+    return False
+
+  # Para cada número de 2 a n, se n é divisible por ele, ele não é primo.
+  for i in range(2, int(n**0.5) +",0.0,7.839928150177002,17.984858700116614
+google/gemma-7b-it,Dense,code_mbpp,Escreva uma função que retorna o quadrado de um número.,def quadrado(x): return x**2,"Escreva uma função que retorna o quadrado de um número.
+
+```python
+def quadrado(num):
+  return num ** 2
+
+# Exemplo de uso
+print(quadrado(5))  # Saída: 25
+```
+
+**Explicação:**
+
+* A função `quadrado` recebe um número `num` como entrada.
+* A função calcula o quadrado de `num` usando a exponentiation `** 2` e retorna o resultado.
+* No exemplo de uso, a função `quadrado` é chamada com o número 5 como argumento, e o resultado é impresso.
+
+**Saída:**
+
+```
+25
+",0.0,7.881502866744995,17.889989052079354
+google/gemma-7b-it,Dense,code_mbpp,Escreva uma função que calcula a média de uma lista.,def media(lst): return sum(lst)/len(lst),"Escreva uma função que calcula a média de uma lista.
+
+```python
+def calcula_media(lista):
+  total = 0
+  for elemento in lista:
+    total += elemento
+  media = total / len(lista)
+  return media
+```
+
+**Explicação:**
+
+* A função `calcula_media` recebe uma lista `lista` como entrada.
+* Ela começa calculando a soma dos elementos da lista com a linha `total = 0` e `for elemento in lista: total += elemento`.
+* A média é calculada com a linha `media = total / len(lista)` e retorna a média.
+
+**Exemplo",0.0,7.898575305938721,17.851320591193957
+google/gemma-7b-it,Dense,code_mbpp,Crie uma função que concatena duas strings.,"def concatena(a,b): return a+b","Crie uma função que concatena duas strings.
+
+```python
+def concatena_strings(str1, str2):
+  return str1 + str2
+```
+
+**Explicação:**
+
+* A função `concatena_strings` recebe duas strings `str1` e `str2` como entrada.
+* Ela retorna a concatenação das duas strings, com o operador `+`.
+* A concatenação de strings é feita pelo próprio operador `+`, que junta as duas strings em ordem.
+
+**Exemplo de uso:**
+
+```python
+str1 = ""Olá, ""
+str2 = ""mundo!""
+
+concatena_strings(str1",0.0,7.8666722774505615,17.669478922928672
+google/gemma-7b-it,Dense,code_mbpp,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+```python
+def count_vowels(text):
+  """"""Conta o número de vogais em uma string.
+
+  Parâmetros:
+    text: A string.
+
+  Retorna:
+    O número de vogais na string.
+  """"""
+
+  vowels = ['a', 'e', 'i', 'o', 'u']
+  count = 0
+  for letter in text.lower():
+    if letter in vowels:
+      count += 1
+
+  return count
+```
+
+**Explicação:**
+
+* A função `count_vowels` recebe uma",0.0,7.9288458824157715,17.909289965506964
+google/gemma-7b-it,Dense,qa_fin,Qual é o código ISIN do ITUB4?,BRITUBACNPR1,"Qual é o código ISIN do ITUB4?
+
+O código ISIN do ITUB4 é BR000B0F2R8.",0.0,1.3591876029968262,24.27920908580937
+google/gemma-7b-it,Dense,qa_fin,Qual é a moeda oficial do Brasil?,real,"Qual é a moeda oficial do Brasil?
+
+A resposta para essa pergunta é: Real brasileiro.",1.0,0.7559773921966553,26.455817603071026
+google/gemma-7b-it,Dense,qa_fin,O que significa o termo 'free float'?,percentual de ações em livre circulação,"O que significa o termo 'free float'?
+
+O free float é um conceito que descreveria a diferença entre o número total de ações de uma empresa e o número de ações que estão no mercado.
+
+O free float é importante porque ele indica a liquidez de uma empresa. Quanto maior o free float, maior a liquidez da empresa.",0.0,3.80676531791687,18.388315053344357
+google/gemma-7b-it,Dense,qa_fin,Qual é o índice de ações mais famoso da B3?,Ibovespa,"Qual é o índice de ações mais famoso da B3?
+
+A) Ibovespa
+B) Iboaz
+C) Ibopar
+D) Ibogem
+
+A resposta para a questão é A.
+
+O Ibovespa é o índice de ações mais famoso da B3.",1.0,3.0827746391296387,19.78736921788813
+google/gemma-7b-it,Dense,qa_fin,Qual é a função de um 'market maker'?,fornecer liquidez ao mercado,"Qual é a função de um 'market maker'?
+
+O mercado financeiro é composto por diversos elementos, entre os quais os market makers. Os market makers são os que têm a função de proporcionar a liquidez para os mercados, ou seja, de fornecer os preços para que os traders possam comprar ou vender os ativos.
+
+Em outras palavras, os market makers são os que têm a responsabilidade de manter a ordem dos preços dos ativos, de modo que os preços dos ativos fluam suavemente e sem grande volatilidade.",0.0,5.832469463348389,18.002666050774327
+google/gemma-7b-it,Dense,qa_fin,O que é o CDI?,Certificado de Depósito Interbancário,"O que é o CDI?
+
+CDI (Capital Investiment Decisions Index) é um índice que indica a capacidade de investimento de um país. É calculado pela razão entre o investimento externo líquido total (FDI) do país e o produto interno bruto (PIB) do país.",0.0,3.3765738010406494,17.47333346655014
+google/gemma-7b-it,Dense,qa_fin,O que é uma ação preferencial?,ação com preferência em dividendos,"O que é uma ação preferencial?
+
+Uma ação preferencial é uma ação que dá ao seu proprietário o direito a receber dividendos antes dos proprietários das ações comuns.",0.0,1.79937744140625,20.562667480750314
+google/gemma-7b-it,Dense,qa_fin,Qual é a função do Banco Central do Brasil?,controlar a política monetária,"Qual é a função do Banco Central do Brasil?
+
+a) Criar e implementar políticas de câmbio
+b) Promover a crescimento do mercado financeiro
+c) Controlar a inflação
+d) Promover a estabilidade dos preços
+
+A resposta para a questão é c) Controlar a inflação.
+
+O Banco Central do Brasil é responsável pela controle da inflação no país.",0.0,4.2933526039123535,18.633456736607034
+google/gemma-7b-it,Dense,qa_fin,O que é um fundo de investimento?,veículo coletivo de aplicação financeira,"O que é um fundo de investimento?
+
+Um fundo de investimento é uma entidade que poolinga dinheiro de diversos investidores para investir em ativos como ações, títulos ou outros ativos.",0.0,1.8591978549957275,20.438922031828252
+google/gemma-7b-it,Dense,qa_fin,Qual é a sigla da moeda americana?,USD,"Qual é a sigla da moeda americana?
+
+A) USD
+B) EUR
+C) GBP
+D) CAD",1.0,1.0614337921142578,24.49516888680442
+openchat/openchat-3.5-0106,Dense,qa_factual,Quem escreveu a peça Hamlet?,William Shakespeare,"Quem escreveu a peça Hamlet?
+
+A peça Hamlet foi escrita por William Shakespeare.
+
+Qual é a data de nascimento de William Shakespeare?
+
+William Shakespeare nasceu em 26 de abril de 1564.
+
+Qual é a data de morte de William Shakespeare?
+
+William Shakespeare morreu em 23 de abril de 1616.
+
+Em qual cidade nasceu William Shakespeare?
+
+William Shakespeare nasceu em Stratford-upon-Avon, Inglaterra.
+
+Qual é a data de estreia da",1.0,8.799246549606323,16.02409924589604
+openchat/openchat-3.5-0106,Dense,qa_factual,Qual é o maior planeta do sistema solar?,Júpiter,"Qual é o maior planeta do sistema solar?
+
+O maior planeta do sistema solar é Júpiter.
+
+Qual é a maior lua do sistema solar?
+
+A maior lua do sistema solar é a lua de Saturno, Titã.
+
+Qual é o planeta mais próximo do Sol?
+
+O planeta mais próximo do Sol é o Mercurio.
+
+Qual é o planeta mais distante do Sol?
+
+O planeta mais distante do Sol é Netuno.
+
+Qual é o planeta com mais massa?
+
+O planeta com mais",1.0,8.800877571105957,15.907504549277236
+openchat/openchat-3.5-0106,Dense,qa_factual,Em que continente fica o Egito?,África,"Em que continente fica o Egito?
+
+O Egito fica no continente Africano.
+
+O Egito é um país localizado no nordeste do continente africano, na região do Mediterrâneo. É um dos países mais antigos do mundo, com uma história de mais de 5.000 anos.
+
+O Egito é um país com uma grande riqueza cultural e histórica, com muitos monumentos e sítios turísticos importantes, como as pirâmides de Gizá, o Templo de Karnak e o Valado dos",0.0,8.762233257293701,15.863535689864923
+openchat/openchat-3.5-0106,Dense,qa_factual,Quem pintou a Mona Lisa?,Leonardo da Vinci,"Quem pintou a Mona Lisa?
+
+Leonardo da Vinci
+
+Quem é o maior artista de todos os tempos?
+
+Leonardo da Vinci
+
+Quem é o maior artista brasileiro de todos os tempos?
+
+Vinicius de Moraes
+
+Quem é o maior poeta brasileiro de todos os tempos?
+
+Vinicius de Moraes
+
+Quem é o maior escritor brasileiro de todos os tempos?
+
+Machado de Assis
+
+Quem é o maior escritor de",1.0,8.750123262405396,15.771206400361498
+openchat/openchat-3.5-0106,Dense,qa_factual,Qual é o idioma oficial do Japão?,Japonês,"Qual é o idioma oficial do Japão?
+
+O idioma oficial do Japão é o japonês.
+
+Qual é o idioma oficial da Austrália?
+
+O idioma oficial da Austrália é o inglês.
+
+Qual é o idioma oficial da Índia?
+
+O idioma oficial da Índia é o hindi.
+
+Qual é o idioma oficial da China?
+
+O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da Rússia?
+
+O idioma oficial da Rússia é o rus",1.0,8.783199071884155,15.825668855093134
+openchat/openchat-3.5-0106,Dense,qa_factual,Em que país nasceu Albert Einstein?,Alemanha,"Em que país nasceu Albert Einstein?
+
+Albert Einstein nasceu na Alemanha.
+
+Em que ano Albert Einstein nasceu?
+
+Albert Einstein nasceu em 14 de março de 1879.
+
+Em que cidade nasceu Albert Einstein?
+
+Albert Einstein nasceu em Ulm, na Alemanha.
+
+Albert Einstein nasceu em 14 de março de 1879, em Ulm, na Alemanha. Ele é conhecido por suas contribuições para a física, incluindo a teoria",1.0,8.771516561508179,15.732741200715719
+openchat/openchat-3.5-0106,Dense,qa_factual,Quantos dias há em um ano bissexto?,366,"Quantos dias há em um ano bissexto?
+
+Um ano bissexto tem 366 dias.
+
+Porém, para calcular o número de dias em um ano bissexto, você precisa saber em que mês o ano começa.
+
+Se o ano começa em janeiro, o número de dias é 366.
+
+Se o ano começa em fevereiro, o número de dias é 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + ",1.0,8.760823249816895,16.208522412887152
+openchat/openchat-3.5-0106,Dense,qa_factual,Qual elemento químico tem símbolo O?,Oxigênio,"Qual elemento químico tem símbolo O?
+
+O é o símbolo químico do elemento oxigênio.
+
+O elemento químico com símbolo O é?
+
+O elemento químico com símbolo O é o oxigênio.
+
+Qual é o símbolo químico do oxigênio?
+
+O símbolo químico do oxigênio é O.
+
+Qual é o símbolo químico do elemento oxigênio?
+
+O símbolo químico do elemento oxigênio é O.
+
+",1.0,8.73926329612732,16.134083071107625
+openchat/openchat-3.5-0106,Dense,qa_factual,Qual é a capital do Canadá?,Ottawa,"Qual é a capital do Canadá?
+
+O Ottawa é a capital do Canadá.
+
+O Ottawa é a capital do Canadá, localizada na província de Ontario, na região do lago Ontário. Foi fundada em 1867, quando a Confederação do Canadá foi estabelecida. A cidade é conhecida por suas belas arquiteturas, museus e monumentos históricos, além de ser um importante centro político e cultural do país.
+
+O Ottawa é a capital do Canadá, localizada na província de",1.0,8.758753538131714,15.641495037343269
+openchat/openchat-3.5-0106,Dense,qa_factual,Quem descobriu o Brasil?,Pedro Álvares Cabral,"Quem descobriu o Brasil?
+
+# Quem descobriu o Brasil?
+
+O Brasil foi descoberto por navegadores portugueses no século XVI, liderados por Pedro Álvares Cabral. Ele chegou à costa brasileira em 22 de abril de 1500, em uma expedição organizada pelo rei Manuel I de Portugal.
+
+## Resposta:
+
+O Brasil foi descoberto por navegadores portugueses no século XVI, liderados por Pedro Álvares Cabral.",1.0,8.732704162597656,15.802665180283642
+openchat/openchat-3.5-0106,Dense,math_gsm8k,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?",5,"Se João tem 3 maçãs e compra mais 2, quantas ele tem agora?
+
+A resposta é: 5
+
+Explicação:
+Se João tem 3 maçãs e compra mais 2, ele terá 3 + 2 = 5 maçãs.
+
+Voltar ao menu principal: [3 + 2 = 5]
+
+Voltar ao menu principal: [5]
+
+Voltar ao menu principal: [5]
+
+Voltar ao menu principal: [5]
+
+Voltar ao menu principal: [5]
+
+Voltar ao menu principal: [5]",1.0,8.750592947006226,17.484529440070084
+openchat/openchat-3.5-0106,Dense,math_gsm8k,Qual é o resultado de 12 × 8?,96,"Qual é o resultado de 12 × 8?
+
+12 × 8 = 96
+
+Qual é o resultado de 12 × 9?
+
+12 × 9 = 108
+
+Qual é o resultado de 12 × 10?
+
+12 × 10 = 120
+
+Qual é o resultado de 12 × 11?
+
+12 × 11 = 132
+
+Qual é o resultado de 12 × 12?
+
+12 × 12 = 144
+
+Qual",1.0,8.770572900772095,16.190504498001424
+openchat/openchat-3.5-0106,Dense,math_gsm8k,Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?,3.5,"Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?
+
+A resposta é: 3h30.
+
+Porque a diferença entre as horas de partida e chegada é de 3h30.
+
+---
+
+A resposta pode variar dependendo do horário de partida e chegada. Por exemplo, se o trem partisse às 10h e chegar às 13h30, a viagem duraria 3h30. Se o trem partisse às 10h e chegar às 14h30,",0.0,8.807794570922852,18.165727948311552
+openchat/openchat-3.5-0106,Dense,math_gsm8k,Qual é a metade de 144?,72,"Qual é a metade de 144?
+
+A metade de 144 é 72.
+
+Para calcular a metade de um número, você pode dividi-lo pela metade, que é 0,5.
+
+72 = 144 / 2
+
+Portanto, a metade de 144 é 72.
+
+---
+
+Vamos aplicar o mesmo raciocínio para calcular a metade de outros números:
+
+Qual é a metade de 288?
+
+288 / 2 =",1.0,8.729275465011597,16.037986263710376
+openchat/openchat-3.5-0106,Dense,math_gsm8k,"Se 5x = 20, qual é o valor de x?",4,"Se 5x = 20, qual é o valor de x?
+
+Para resolver este problema, precisamos dividir ambos lados de la ecuación por 5. Esto nos dará:
+
+x = 20 / 5
+
+x = 4
+
+Por lo tanto, el valor de x es 4.
+
+La respuesta es: 4",1.0,5.183691501617432,17.74796975693748
+openchat/openchat-3.5-0106,Dense,math_gsm8k,Qual é o quadrado de 15?,225,"Qual é o quadrado de 15?
+15^2 = 225
+
+Qual é o cubo de 15?
+15^3 = 3375
+
+Qual é o quadrado de 20?
+20^2 = 400
+
+Qual é o cubo de 20?
+20^3 = 8000
+
+Qual é o quadrado de 25?
+25^2 = 625
+
+Qual é o cubo de 25?
+25^3 = 15625
+
+Qual é",1.0,8.771323204040527,15.847095901787016
+openchat/openchat-3.5-0106,Dense,math_gsm8k,Maria tinha 10 reais e gastou 4. Quanto sobrou?,6,"Maria tinha 10 reais e gastou 4. Quanto sobrou?
+
+resposta = 10 - 4
+print(resposta)
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",0.0,8.81528925895691,16.90245159551699
+openchat/openchat-3.5-0106,Dense,math_gsm8k,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?",5,"Se uma pizza tem 8 fatias e João come 3, quantas sobram?
+
+resposta = 8 - 3
+print(resposta)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",0.0,8.738397121429443,17.165619496984217
+openchat/openchat-3.5-0106,Dense,math_gsm8k,O triplo de 7 é quanto?,21,"O triplo de 7 é quanto?
+
+7 * 3 = 21
+
+O dobro de 7 é quanto?
+
+7 * 2 = 14
+
+A metade de 7 é quanto?
+
+7 / 2 = 3,5
+
+A raiz quadrada de 7 é quanto?
+
+√7 = 2,645751311
+
+A potência de 7 elevado a 2 é quanto?
+
+7^2 = 49
+
+A potência de 7 elevado a 3 é quanto",1.0,8.763600587844849,15.861060600227901
+openchat/openchat-3.5-0106,Dense,math_gsm8k,Quanto é 10% de 250?,25,"Quanto é 10% de 250?
+
+10% de 250 é igual a 25.
+
+Para calcular 10% de 250, você pode usar a fórmula:
+
+(10/100) x 250 = 25
+
+Portanto, 10% de 250 é igual a 25.
+
+Você pode usar uma calculadora ou um programa de cálculo para verificar o resultado.
+
+Aqui está o cálculo:
+
+1",1.0,8.750333070755005,16.227953707795013
+openchat/openchat-3.5-0106,Dense,code_mbpp,Escreva uma função Python que soma dois números.,"def soma(a,b): return a+b","Escreva uma função Python que soma dois números.
+
+def soma(a, b):
+    return a + b
+
+# Exemplo de uso:
+print(soma(5, 3)) # Saída: 8
+print(soma(10, 20)) # Saída: 30
+print(soma(-5, 10)) # Saída: 5
+print(soma(0, 0)) # Saída: 0
+print(soma(100, -50)) # Saída: 50
+print(soma",0.0,8.788389444351196,16.499041254162883
+openchat/openchat-3.5-0106,Dense,code_mbpp,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um número é par.
+
+function isPar(num) {
+    if (num % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isPar(10)); // true
+console.log(isPar(7)); // false
+console.log(isPar(0)); // true
+console.log(isPar(-10)); // true
+console.log(isPar(-7)); // false
+console.log(isPar(100)); // true
+console.log(isPar(1",0.0,8.739452600479126,16.477004519951905
+openchat/openchat-3.5-0106,Dense,code_mbpp,Implemente uma função que calcula o fatorial de n.,def fatorial(n): return 1 if n==0 else n*fatorial(n-1),"Implemente uma função que calcula o fatorial de n.
+
+def fatorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * fatorial(n-1)
+
+print(fatorial(5))
+
+# 120
+
+# O fatorial de um número n é o produto de todos os números inteiros menores que n,
+# começando por 1. Por exemplo, o fatorial de 5 é 5 * 4 * 3 * 2 * 1 = 120.
+
+#",0.0,8.78604006767273,16.389636160416817
+openchat/openchat-3.5-0106,Dense,code_mbpp,Crie uma função que retorna o maior de dois números.,"def maior(a,b): return a if a>b else b","Crie uma função que retorna o maior de dois números.
+
+function maior(num1, num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+console.log(maior(5, 10)); // 10
+console.log(maior(20, 10)); // 20
+console.log(maior(10, 10)); // 10
+
+// Outra forma de fazer a mesma coisa é usando o operador ternário
+
+",0.0,8.815294981002808,16.67556222642451
+openchat/openchat-3.5-0106,Dense,code_mbpp,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+function inverterString(string) {
+    return string.split('').reverse().join('');
+}
+
+console.log(inverterString('olá mundo')); // 'dunor mola'
+
+// A função inverterString recebe uma string como parâmetro, divide a string em um array de caracteres,
+// reorganiza o array em ordem inversa e, finalmente, junta os caracteres em uma nova string.
+
+// A função split('') divide a string em um array de caracteres, o método reverse",0.0,8.849997997283936,15.932206995218857
+openchat/openchat-3.5-0106,Dense,code_mbpp,Escreva uma função que retorna se um número é primo.,"def is_prime(n): return all(n%i for i in range(2,int(n**0.5)+1)) and n>1","Escreva uma função que retorna se um número é primo.
+
+Um número primo é um número inteiro maior que 1 que tem apenas dois divisores: 1 e ele mesmo.
+
+Exemplo:
+
+```
+function isPrime(n) {
+    if (n < 2) {
+        return false;
+    }
+
+    for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+console.log(",0.0,8.713462114334106,16.526152074858096
+openchat/openchat-3.5-0106,Dense,code_mbpp,Escreva uma função que retorna o quadrado de um número.,def quadrado(x): return x**2,"Escreva uma função que retorna o quadrado de um número.
+
+function quadrado(numero) {
+    return numero * numero;
+}
+
+console.log(quadrado(5)); // 25
+console.log(quadrado(10)); // 100
+console.log(quadrado(0)); // 0
+
+// Outra forma de escrever a função
+
+function quadrado(numero) {
+    return numero ** 2;
+}
+
+console.log(quadrado(5)); // 25
+console.log(quadrado(10)); //",0.0,8.785269498825073,16.504900620224802
+openchat/openchat-3.5-0106,Dense,code_mbpp,Escreva uma função que calcula a média de uma lista.,def media(lst): return sum(lst)/len(lst),"Escreva uma função que calcula a média de uma lista.
+
+def media(lista):
+    soma = 0
+    for i in lista:
+        soma += i
+    return soma / len(lista)
+
+# Exemplo de uso:
+lista = [1, 2, 3, 4, 5]
+print(media(lista)) # Saída: 3.0
+
+# Exemplo de uso:
+lista = [10, 20, 30, 40, 50]
+print(media(lista)) # Saída: 30.",0.0,8.74243688583374,16.58576457497317
+openchat/openchat-3.5-0106,Dense,code_mbpp,Crie uma função que concatena duas strings.,"def concatena(a,b): return a+b","Crie uma função que concatena duas strings.
+
+function concatena(string1, string2) {
+    return string1 + string2;
+}
+
+console.log(concatena(""Olá"", ""Mundo"")); // OláMundo
+
+// Outra forma de concatenar é usando o template literal
+function concatena(string1, string2) {
+    return `${string1}${string2}`;
+}
+
+console.log(concatena(""Olá"", ""Mundo"")); // OláMundo
+
+// Outra forma de concatenar é usando o método",0.0,8.816734552383423,16.105736104033348
+openchat/openchat-3.5-0106,Dense,code_mbpp,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+function contarVogais(string) {
+    let vogais = 'aeiouAEIOU';
+    let contador = 0;
+
+    for (let i = 0; i < string.length; i++) {
+        if (vogais.indexOf(string[i]) !== -1) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+console.log(contarVogais('Olá, mundo!')); // 7
+console.log(contarVogais('",0.0,8.741434812545776,16.58766588202372
+openchat/openchat-3.5-0106,Dense,qa_fin,Qual é o código ISIN do ITUB4?,BRITUBACNPR1,"Qual é o código ISIN do ITUB4?
+
+O ITUB4 é um índice bolsista, portanto, não possui um código ISIN. O código ISIN é atribuído a títulos de dívida, ações e outros instrumentos financeiros.
+
+O que é um código ISIN?
+
+O código ISIN (International Securities Identification Number) é um identificador internacional de títulos e outros instrumentos financeiros. Ele é composto por 12 dígitos e é usado para identificar e facil",0.0,8.820630073547363,16.09862320673112
+openchat/openchat-3.5-0106,Dense,qa_fin,Qual é a moeda oficial do Brasil?,real,"Qual é a moeda oficial do Brasil?
+
+O real (BRL) é a moeda oficial do Brasil.
+
+Qual é a moeda oficial da Austrália?
+
+A moeda oficial da Austrália é o Dólar Australiano (AUD).
+
+Qual é a moeda oficial da Alemanha?
+
+A moeda oficial da Alemanha é o Euro (EUR).
+
+Qual é a moeda oficial da França?
+
+A moeda oficial da França é o Euro (EUR).
+
+Qual é a moeda oficial da Índia?
+
+A mo",1.0,8.821362257003784,15.643842297762333
+openchat/openchat-3.5-0106,Dense,qa_fin,O que significa o termo 'free float'?,percentual de ações em livre circulação,"O que significa o termo 'free float'?
+
+O termo ""free float"" é usado em finanças para se referir à porção de ações de uma empresa que estão disponíveis para negociação no mercado. Essas ações são aquelas que não estão detidas por acionistas institucionais, como fundos de investimento, que geralmente detêm ações em carteira por longos períodos de tempo e não as negociam frequentemente.
+
+O free float é importante para os investidores, pois indica a liquidez das",0.0,8.797109365463257,16.02799216678545
+openchat/openchat-3.5-0106,Dense,qa_fin,Qual é o índice de ações mais famoso da B3?,Ibovespa,"Qual é o índice de ações mais famoso da B3?
+
+O índice de ações mais famoso da B3 é o Ibovespa.
+
+O Ibovespa é um índice de ações da B3 que reúne as 50 ações mais líderes do mercado de valores brasileiro.
+
+O índice Ibovespa é calculado a cada minuto e a cada 15 segundos, e é composto por ações de empresas de diversos setores, como petróleo, bancário, de telecomunicações, de minera",1.0,8.772767066955566,16.52842243425935
+openchat/openchat-3.5-0106,Dense,qa_fin,Qual é a função de um 'market maker'?,fornecer liquidez ao mercado,"Qual é a função de um 'market maker'?
+
+O market maker é uma pessoa ou instituição que oferece comprar e vender ações, câmbio, opções, futuros, etc. para outros investidores. O market maker pode ser uma empresa de corretagem, um banco de investimento, ou um banco de empréstimo. O market maker oferece comprar e vender ações para outros investidores, e faz isso para garantir que haja liquidez no mercado.
+
+O market maker pode comprar e vender a",0.0,8.7592933177948,16.097188995093216
+openchat/openchat-3.5-0106,Dense,qa_fin,O que é o CDI?,Certificado de Depósito Interbancário,"O que é o CDI?
+
+O CDI é o acrônimo de ""Controle de Desempenho de Interface"" (CDIP) ou ""Controle de Desempenho de Interface de Dados"" (CDID). É um conjunto de práticas e técnicas que visam melhorar a qualidade do software, garantindo que o software seja fácil de usar, de entender e de manter.
+
+O CDI é baseado em cinco princípios:
+
+1. Consistência: o software deve ser consist",0.0,8.748809576034546,15.544972012254366
+openchat/openchat-3.5-0106,Dense,qa_fin,O que é uma ação preferencial?,ação com preferência em dividendos,"O que é uma ação preferencial?
+
+Uma ação preferencial é uma ação que tem prioridade em relação a outras ações em caso de liquidação da empresa. Ações preferenciais têm direitos preferenciais, como dividendos e distribuições especiais, e também têm direito a serem pagas primeiro em caso de liquidação.
+
+Por exemplo, se uma empresa estiver indo para liquidação, os acionistas com ações preferenciais receberão o valor de suas ações antes dos acionistas com ações",0.0,8.766621828079224,15.741525379592648
+openchat/openchat-3.5-0106,Dense,qa_fin,Qual é a função do Banco Central do Brasil?,controlar a política monetária,"Qual é a função do Banco Central do Brasil?
+
+O Banco Central do Brasil é a instituição responsável por gerenciar a política monetária do país, estabilizar o valor da moeda nacional, o real, e garantir a estabilidade econômica do país.
+
+Além disso, o Banco Central também é responsável por supervisionar e regulamentar os bancos do Brasil, controlar a oferta de crédito e monitorar a inflação.
+
+O Banco Central do Brasil também é responsável por emitir e cunhar moeda",0.0,8.764867782592773,16.08695116656856
+openchat/openchat-3.5-0106,Dense,qa_fin,O que é um fundo de investimento?,veículo coletivo de aplicação financeira,"O que é um fundo de investimento?
+
+Um fundo de investimento é um veículo de investimento coletivo que reúne recursos de vários investidores e os investe em uma variedade de ativos, como ações, obrigações, fundos de investimento e outros instrumentos financeiros. Os fundos de investimento são gerenciados por profissionais de investimento e oferecem diversas vantagens, como diversificação, acesso a ativos de alta qualidade e custos mais baixos em comparação com a aquisição de",0.0,8.734156370162964,15.914530735314338
+openchat/openchat-3.5-0106,Dense,qa_fin,Qual é a sigla da moeda americana?,USD,"Qual é a sigla da moeda americana?
+
+A sigla da moeda americana é USD, que é o acrônimo de Dólar dos Estados Unidos.
+
+Qual é a moeda da Austrália?
+
+A moeda da Austrália é o Dólar Australiano, cujo símbolo é AUD.
+
+Qual é a moeda da Alemanha?
+
+A moeda da Alemanha é o Euro, cujo símbolo é EUR.
+
+Qual é a moeda da Inglaterra?
+
+A moeda da Inglaterra é o",1.0,8.828047513961792,15.858546272954046

@@ -1,0 +1,1579 @@
+model,family,task,question,expected,answer,correct,latency,tokens_s
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_curta,Quem escreveu Dom Quixote?,Miguel de Cervantes,"Quem escreveu Dom Quixote?
+Quem escreveu Dom Quixote?
+
+A: Dom Quixote é um romance de Miguel de Cervantes, publicado em 1605.
+",1.0,2.9160842895507812,17.832132008780352
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_curta,Qual é a capital da França?,Paris,"Qual é a capital da França?
+R. Paris
+
+Qual é a capital da Itália?
+R. Roma
+
+Qual é a capital da Espanha?
+R. Madrid
+
+Qual é a capital da Alemanha?
+R. Berlin
+
+Qual é a capital da Holanda?
+R. Amsterdã
+
+Qual é a capital da Suíça?
+R. Berna
+
+Qual é a capital da Reino Unido?
+R. Londres
+
+Qual é a capital da França?
+R. Paris
+
+Qual é a capital da Itá",1.0,8.563636064529419,15.997877416516333
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_curta,Quem pintou Guernica?,Pablo Picasso,"Quem pintou Guernica?
+Guernica é um famoso quadro de Picasso.
+
+A: O quadro foi pintado por Picasso.
+",0.0,2.0539464950561523,18.987836389055396
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_curta,Qual é o idioma oficial da China?,Chinês,"Qual é o idioma oficial da China?
+A: O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+A: O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+A: O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+A: O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+A: O idioma oficial da China é o chinês.",1.0,8.522267818450928,16.31021260550642
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,qa_curta,Quem descobriu a América?,Cristóvão Colombo,"Quem descobriu a América?
+Quem descobriu a América?
+
+## Quem descobriu a América?
+
+Quem descobriu a América?
+
+## Quem descobriu a América?
+
+Quem descobriu a América?
+
+## Quem descobriu a América?
+
+Quem descobriu a América?
+
+## Quem descobriu a América?
+
+Quem descobriu a América?
+
+## Quem descobriu a América?
+
+Quem",0.0,8.527374505996704,16.30044510209456
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,calculo_rapido,Quanto é 23 + 57?,80,"Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23 + 57?
+Quanto é 23",0.0,8.518152475357056,16.31809249741958
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,calculo_rapido,Quanto é 15 × 6?,90,"Quanto é 15 × 6?
+R: 90
+""""""
+
+print('Quanto é 15 x 6?')
+print('R:', 15 * 6)",1.0,2.485438108444214,18.91014700399043
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,calculo_rapido,"Se tenho 20 e gasto 5, quanto resta?",15,"Se tenho 20 e gasto 5, quanto resta?
+
+#include <stdio.h>
+
+int main()
+{
+    int dinheiro = 20;
+    int gasto = 5;
+    int resto;
+
+    resto = dinheiro - gasto;
+
+    printf(""Resto: %d\n"", resto);
+
+    return 0;
+}",0.0,5.379454612731934,17.845675242391682
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,calculo_rapido,Quanto é 10% de 300?,30,"Quanto é 10% de 300?
+
+def porcentagem(valor, porcentagem):
+    return valor * (porcentagem / 100)
+
+print(porcentagem(300, 10))",1.0,3.2760255336761475,18.92537141809989
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,calculo_rapido,Quanto é 100 ÷ 4?,25,"Quanto é 100 � 4?
+R: 25
+
+Quanto é 100 � 4?
+R: 25
+
+Quanto é 100 � 4?
+R: 25
+
+Quanto é 100 � 4?
+R: 25
+
+Quanto é 100 � 4?
+R: 25
+
+Quanto é 100 � 4?
+R: 25
+
+Quanto é 100 � 4?
+R: 25
+
+",1.0,8.543093204498291,16.50456065793098
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,codigo_trivial,Escreva uma função Python que retorna o quadrado de x.,def quadrado(x): return x**2,"Escreva uma função Python que retorna o quadrado de x.
+<jup
+def square(x):
+    return x * x
+
+print(square(2))
+print(square(3))
+print(square(4))
+print(square(5))
+print(square(6))
+print(square(7))
+print(square(8))
+print(square(9))
+print(square(10))
+print(square(11))
+print(square(12))
+print(square(13))
+print(square(14))
+print(square(15))
+print(square(1",0.0,8.510859966278076,17.154553191861286
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,codigo_trivial,Crie uma função que soma dois números.,"def soma(a,b): return a+b","Crie uma função que soma dois n�meros.
+
+function soma(a, b) {
+    return a + b;
+}
+
+console.log(soma(2, 3));
+console.log(soma(10, 10));
+console.log(soma(100, 100));
+console.log(soma(1000, 1000));
+console.log(soma(10000, 10000));
+console.log(soma(100000, 100000",0.0,8.555156469345093,17.065731120540974
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,codigo_trivial,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um n�mero é par.
+
+def par(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+print(par(2))
+print(par(3))
+
+# Escreva uma função que verifica se um n�mero é ímpar.
+
+def impar(n):
+    if n % 2 != 0:
+        return True
+    else:
+        return False
+
+print(impar(2))
+print(impar(3))
+
+# Escreva uma função",0.0,8.531605958938599,17.464472775362076
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,codigo_trivial,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+function inverteString(string) {
+    let inverte = '';
+    for (let i = string.length - 1; i >= 0; i--) {
+        inverte += string[i];
+    }
+    return inverte;
+}
+
+console.log(inverteString('banana'));",0.0,5.156949758529663,18.03391624015277
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,codigo_trivial,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+def conta_vogais(string):
+    vogais = ['a', 'e', 'i', 'o', 'u']
+    contador = 0
+    for letra in string:
+        if letra in vogais:
+            contador += 1
+    return contador
+
+print(conta_vogais(""Olá, mundo!""))  # Saída: 3
+print(conta_vogais(""A cor do aranha é vermelho""))  # Saída: 6
+print(con",0.0,8.503162384033203,17.40528915194031
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,needle_test,"No texto '123 token 999', qual número vem após a palavra token?",999,"No texto '123 token 999', qual n�mero vem após a palavra token?
+
+R: 999
+
+No texto '123 token 999', qual n�mero vem após a palavra token?
+
+R: 999
+
+No texto '123 token 999', qual n�mero vem após a palavra token?
+
+R: 999
+
+No texto '123 token 999', qual n�mero vem após a palavra token?
+
+R: 999
+
+No texto '123 token",1.0,8.494213104248047,18.36544457802486
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,needle_test,"No texto 'A B C D token Z', qual letra vem após token?",Z,"No texto 'A B C D token Z', qual letra vem após token?
+A
+
+No texto 'A B C D token Z', qual letra vem antes de token?
+Z
+
+No texto 'A B C D token Z', qual letra vem depois de token?
+B
+
+No texto 'A B C D token Z', qual letra vem antes de A?
+Z
+
+No texto 'A B C D token Z', qual letra vem depois de Z?
+A
+
+No texto 'A B C D token Z', qual letra vem antes de B?
+A
+
+No texto 'A B",1.0,8.527743339538574,17.355118946158164
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,needle_test,Encontre o número escondido: 'abc token 42 xyz',42,"Encontre o n�mero escondido: 'abc token 42 xyz'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",1.0,8.506162643432617,17.75183550206192
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,needle_test,Qual número aparece depois de token: 'foo token 17 bar'?,17,"Qual n�mero aparece depois de token: 'foo token 17 bar'?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",1.0,8.499578475952148,17.88323979007353
+deepseek-ai/DeepSeek-Coder-6.7B-base,MoE,needle_test,Qual palavra aparece após token: 'um token dois'?,dois,"Qual palavra aparece após token: 'um token dois'?
+
+A: A resposta é:
+
+dois
+
+Ou seja, a palavra que vem depois do token dois.
+",1.0,2.473247528076172,22.237968248484222
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_curta,Quem escreveu Dom Quixote?,Miguel de Cervantes,"Quem escreveu Dom Quixote?
+
+Miguel de Cervantes Saavedra
+
+Quem é o personagem principal de Dom Quixote?
+
+Dom Quixote
+
+Qual é o nome do escudeiro de Dom Quixote?
+
+Sancho Pança
+
+Qual é o nome da amada de Dom Quixote?
+
+Dulcinea
+
+Qual é o nome do cavalo de Dom Quixote?
+
+Rocinante
+
+Qual é o nome do cavalo de Sancho Pança?
+
+Rucio
+
+Qual é o nome do livro",1.0,15.794110774993896,8.864063447095463
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_curta,Qual é a capital da França?,Paris,"Qual é a capital da França?
+
+Paris
+
+What is the capital of France?
+
+Paris
+
+La capitale della Francia è Parigi.
+
+The capital of France is Paris.
+
+Paris est la capitale de la France.
+
+Paris, die Hauptstadt von Frankreich.
+
+Paris, la capitale de Francia.
+
+Paris, la capital de Francia.
+
+Paris, la capital de Francia.
+
+Paris, la capital de Francia.
+
+Paris, la capital de Francia.
+
+Paris, la capital de Francia.
+
+Paris, la",1.0,15.615155220031738,8.773527900910711
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_curta,Quem pintou Guernica?,Pablo Picasso,"Quem pintou Guernica?
+
+Pablo Picasso
+
+Pablo Picasso, a Spanish painter and sculptor, is the artist who painted Guernica. He was born in Malaga, Spain in 1881 and died in Mougins, France in 1973. Picasso is considered one of the most influential artists of the 20th century and is known for his role in the development of Cubism.
+
+Guernica is a large oil painting on canvas that Picasso created in 1937 in response to the bombing of the town of Guernica during the Spanish Civil",1.0,15.732036352157593,8.708344993190341
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_curta,Qual é o idioma oficial da China?,Chinês,"Qual é o idioma oficial da China?
+
+What is the official language of China?
+
+What is the official language of China?
+
+Standard Chinese, also known as Mandarin, is the official language of China.
+
+Standard Chinese, also known as Mandarin, is the official language of China.
+
+Standard Chinese, also known as Mandarin, is the official language of China.
+
+Standard Chinese, also known as Mandarin, is the official language of China.
+
+Standard Chinese, also known as Mandarin, is the official language of China.
+
+Standard Chinese, also known as Mandarin, is the official language of China.",0.0,15.604470491409302,8.843619530439874
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,qa_curta,Quem descobriu a América?,Cristóvão Colombo,"Quem descobriu a América?
+
+* Cristóvão Colombo
+* Américo Vespúcio
+* João de Barros
+* Fernão de Magalhães
+
+Américo Vespúcio
+
+Américo Vespúcio (Pisa, 9 de março de 1451 — Sevilha, 22 de fevereiro de 1512) foi um navegador e explorador italiano, que serviu a Coroa de Castela.
+
+Em 1499, Vespúcio fez sua primeira",1.0,15.656320095062256,8.878203764104075
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,calculo_rapido,Quanto é 23 + 57?,80,"Quanto é 23 + 57?
+
+23 + 57 = 80
+
+Quanto é 80 - 23?
+
+80 - 23 = 57
+
+Quanto é 57 \* 2?
+
+57 \* 2 = 114
+
+Quanto é 114 / 2?
+
+114 / 2 = 57
+
+Quanto é 57 / 3?
+
+57 / 3 = 19
+
+Quanto é 57 % 3?
+
+57 %",1.0,15.786575317382812,8.868294559482074
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,calculo_rapido,Quanto é 15 × 6?,90,"Quanto é 15 × 6?
+
+# 15 × 6 = 90
+
+## Passaggi
+
+| Step 1 | 15 × 6 |
+| Step 2 | 10 × 6 = 60 |
+| Step 3 | 5 × 6 = 30 |
+| Step 4 | 60 + 30 = 90 |
+
+## Answer: 15 × 6 = 90
+
+Ecco come abbiamo fatto:
+
+1. Prima di tutto, moltiplica 15 per",1.0,15.676995277404785,8.866494984554876
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,calculo_rapido,"Se tenho 20 e gasto 5, quanto resta?",15,"Se tenho 20 e gasto 5, quanto resta?
+
+Resposta: 15 resta.
+
+Para resolver este problema, basta subtrair o valor gasto (5) do valor que se tem (20). Dessa forma, teremos:
+
+20 - 5 = 15
+
+Portanto, restam 15.",1.0,9.108402967453003,9.880985758051814
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,calculo_rapido,Quanto é 10% de 300?,30,"Quanto é 10% de 300?
+
+To find 10% of 300, simply multiply 300 by the decimal form of 10%, which is 0.10.
+
+10% of 300 = 300 \* 0.10
+
+= 30
+
+So, 10% of 300 is 30.",1.0,10.571492671966553,9.270214059730284
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,calculo_rapido,Quanto é 100 ÷ 4?,25,"Quanto é 100 ÷ 4?
+
+# 100 ÷ 4 = 25
+
+Divisão é uma operação matemática que combina dois números para produzir um terceiro. É o inverso da multiplicação. É chamado de divisão porque o dividendo é dividido pelo divisor. Neste caso, 100 é o dividendo e 4 é o divisor. O resultado da divisão de 100 por 4 é 25.
+
+Aqui está a equação: $100 \div 4",1.0,15.8259756565094,8.909403316439775
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,codigo_trivial,Escreva uma função Python que retorna o quadrado de x.,def quadrado(x): return x**2,"Escreva uma função Python que retorna o quadrado de x.
+
+# Escreva sua função aqui
+def square(x):
+    return x**2
+
+# Teste sua função aqui
+print(square(3))
+# Deve imprimir: 9
+print(square(0))
+# Deve imprimir: 0
+print(square(4))
+# Deve imprimir: 16",0.0,10.721591234207153,9.513513225030422
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,codigo_trivial,Crie uma função que soma dois números.,"def soma(a,b): return a+b","Crie uma função que soma dois números.
+
+function soma(numero1, numero2) {
+    return numero1 + numero2;
+}
+
+console.log(soma(1, 2));
+
+
+Crie uma função que multiplique dois números.
+
+function multiplica(numero1, numero2) {
+    return numero1 * numero2;
+}
+
+console.log(multiplica(2, 3));
+
+
+Crie uma função que receba três parâmetros e retorne true se pelo menos um deles for verdadeiro.",0.0,15.815397262573242,9.041821563243692
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,codigo_trivial,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um número é par.
+
+function ehPar(numero) {
+    if (numero % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(ehPar(2));
+console.log(ehPar(3));
+
+// ou
+
+function ehPar(numero) {
+    return numero % 2 === 0;
+}
+
+console.log(ehPar(2));
+console.log(ehPar(3));",0.0,14.454528570175171,9.06290366814865
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,codigo_trivial,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+Exemplos:
+
+- inverteString('hello') // retornará 'olleh'
+- inverteString('world') // retornará 'dlrow'
+- inverteString('12345') // retornará '54321'
+- inverteString('') // retornará ''
+
+function inverteString(string) {
+  return string.split('').reverse().join('');
+}
+
+// ou
+
+function inverteString(string) {
+  let in",0.0,15.86361026763916,8.88826677037268
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,codigo_trivial,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+function contaVogais(string) {
+    let contador = 0;
+    let vogais = 'aeiouAEIOU';
+
+    for (let i = 0; i < string.length; i++) {
+        if (vogais.includes(string[i])) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+console.log(contaVogais('O rato roeu a roupa do rei'));",0.0,14.402942657470703,9.164793829928396
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,needle_test,"No texto '123 token 999', qual número vem após a palavra token?",999,"No texto '123 token 999', qual número vem após a palavra token?
+
+# 999
+
+# Explicação:
+# A string '123 token 999' contém duas palavras separadas por um espaço: '123' e '999'.
+# A palavra 'token' é ignorada porque não é o número que estamos procurando.
+# Portanto, o número que vem após a palavra 'token' é '999'.",1.0,12.861254453659058,9.952372877871465
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,needle_test,"No texto 'A B C D token Z', qual letra vem após token?",Z,"No texto 'A B C D token Z', qual letra vem após token?
+
+A
+
+Qual a diferença entre o comando 'echo' e 'printf'?
+
+O comando 'echo' é um comando interno do shell, que imprime a string que lhe é passada como argumento. Já o comando 'printf' é um comando externo, que permite formatar a string antes de imprimir.
+
+Qual a diferença entre o comando 'rm' e 'rmdir'?
+
+O comando 'rm' é usado para remover arquivos e diretórios, enquanto o com",1.0,15.818674087524414,9.419247098434793
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,needle_test,Encontre o número escondido: 'abc token 42 xyz',42,"Encontre o número escondido: 'abc token 42 xyz'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",1.0,15.654695510864258,9.454032491228523
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,needle_test,Qual número aparece depois de token: 'foo token 17 bar'?,17,"Qual número aparece depois de token: 'foo token 17 bar'?
+
+# Solução do Problema
+
+Para resolver esse problema, podemos utilizar a função `split()` para dividir a string em uma lista de substrings, onde cada substring é separada pelo token 'token'. Em seguida, podemos acessar o terceiro elemento da lista, que é o número que aparece depois do token. Veja o exemplo abaixo:
+
+```python
+string = 'foo token 17 bar'
+
+# Dividir a string em uma lista de substrings
+",1.0,15.683441162109375,9.436704513392293
+mistralai/Mixtral-8x7B-Instruct-v0.1,MoE,needle_test,Qual palavra aparece após token: 'um token dois'?,dois,"Qual palavra aparece após token: 'um token dois'?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+",1.0,15.587753057479858,9.366327491949919
+google/gemma-7b-it,Dense,qa_curta,Quem escreveu Dom Quixote?,Miguel de Cervantes,"Quem escreveu Dom Quixote?
+
+The answer is: Miguel de Cervantes.
+
+The novel Dom Quixote was written by Miguel de Cervantes.",1.0,1.4210798740386963,18.999635765205962
+google/gemma-7b-it,Dense,qa_curta,Qual é a capital da França?,Paris,"Qual é a capital da França?
+
+a) Roma
+b) Paris
+c) Lyon
+d) Lille
+
+A resposta para a questão é b) Paris.",1.0,1.7495431900024414,20.005222048820162
+google/gemma-7b-it,Dense,qa_curta,Quem pintou Guernica?,Pablo Picasso,"Quem pintou Guernica?
+
+A) Pablo Picasso
+B) Salvador Dalí
+C) Francisco Goya
+D) Joan Miró
+
+A resposta para a questão é A) Pablo Picasso.
+
+Guernica foi pintada por Pablo Picasso em 1937.",1.0,3.204486131668091,18.099625842290095
+google/gemma-7b-it,Dense,qa_curta,Qual é o idioma oficial da China?,Chinês,"Qual é o idioma oficial da China?
+
+A) Inglês
+B) Chinês
+C) Francês
+D) Espanhol
+
+A resposta para a questão é B.
+
+O idioma oficial da China é o chinês.",1.0,2.513199806213379,19.497057050083082
+google/gemma-7b-it,Dense,qa_curta,Quem descobriu a América?,Cristóvão Colombo,"Quem descobriu a América?
+
+A resposta para essa pergunta é: Cristóvão Colombo.
+
+Cristóvão Colombo foi um navegador português que descobriu a América em 1492.",1.0,2.1473352909088135,19.09343183320367
+google/gemma-7b-it,Dense,calculo_rapido,Quanto é 23 + 57?,80,"Quanto é 23 + 57?
+
+A resposta para a questão é: 80.",1.0,0.8179831504821777,28.11793859866448
+google/gemma-7b-it,Dense,calculo_rapido,Quanto é 15 × 6?,90,"Quanto é 15 × 6?
+
+A resposta para a questão é: 90.
+
+15 × 6 = 90",1.0,1.4186065196990967,22.55734733743334
+google/gemma-7b-it,Dense,calculo_rapido,"Se tenho 20 e gasto 5, quanto resta?",15,"Se tenho 20 e gasto 5, quanto resta?
+
+A resposta para essa questão é: 15.
+
+O que foi subtraído foi o valor de 5, então o que resta é a diferença entre 20 e 5, que é 15.",1.0,2.9062037467956543,20.645489864967413
+google/gemma-7b-it,Dense,calculo_rapido,Quanto é 10% de 300?,30,"Quanto é 10% de 300?
+
+A resposta para essa questão é 30.
+
+10% de 300 é igual a 30.",1.0,1.7246863842010498,23.192622361038556
+google/gemma-7b-it,Dense,calculo_rapido,Quanto é 100 ÷ 4?,25,"Quanto é 100 ÷ 4?
+
+A resposta para a questão é: 25.
+
+100 ÷ 4 = 25",1.0,1.4723503589630127,23.092329752238083
+google/gemma-7b-it,Dense,codigo_trivial,Escreva uma função Python que retorna o quadrado de x.,def quadrado(x): return x**2,"Escreva uma função Python que retorna o quadrado de x.
+
+```python
+def square(x):
+  return x ** 2
+```
+
+**Explicação:**
+
+* A função `square` recebe um argumento `x`, que representa o valor de entrada.
+* A função calcula o quadrado de `x` usando a exponentiation `** 2` e retorna o resultado.
+
+**Exemplo de uso:**
+
+```python
+print(square(5))  # Saída: 25
+```
+
+**Output:**
+
+```
+25
+```
+
+**Explicação adicional:**
+
+* A função `square` é uma função de ordem única, o que significa",0.0,7.848403692245483,17.9654367345188
+google/gemma-7b-it,Dense,codigo_trivial,Crie uma função que soma dois números.,"def soma(a,b): return a+b","Crie uma função que soma dois números.
+
+```python
+def soma(num1, num2):
+  return num1 + num2
+```
+
+**Explicação:**
+
+* A função `soma` recebe dois argumentos: `num1` e `num2`.
+* A função retorna a soma dos dois números.
+* A linha `return num1 + num2` calcula a soma dos dois números e retorna o resultado.
+
+**Exemplo de uso:**
+
+```python
+soma(5, 10)  # Resposta: 15
+```
+
+**Output:**
+
+```
+15
+```",0.0,7.427860498428345,17.636303216480464
+google/gemma-7b-it,Dense,codigo_trivial,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um número é par.
+
+```python
+def is_even(num):
+  """"""Verifica se um número é par.
+
+  Parâmetros:
+    num: O número a ser verificado.
+
+  Retorna:
+    True se num é par, False caso contrário.
+  """"""
+
+  return num % 2 == 0
+```
+
+**Explicação:**
+
+* A função `is_even` recebe um número `num` como entrada.
+* Ela verifica se o resto da divisão de `num` por 2 é igual a 0.
+* Se o resto é 0, isso indica que `",0.0,7.8584935665130615,17.942370100146807
+google/gemma-7b-it,Dense,codigo_trivial,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+```python
+def invert_string(string):
+  # Inverte a ordem dos caracteres da string
+  return string[::-1]
+```
+
+**Explicação:**
+
+* A função `invert_string` recebe uma string `string` como entrada.
+* O operador de inverter de string `[::-1]` inverte a ordem dos caracteres na string.
+* A função retorna a string invertida.
+
+**Exemplo:**
+
+```python
+>>> invert_string(""Hello, world!"")
+'!dlrow, Hello'
+```
+
+**Observação:**
+
+* A função preserva a ordem dos espaços e outros",0.0,7.870065450668335,17.40773324678841
+google/gemma-7b-it,Dense,codigo_trivial,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+```python
+def count_vowels(text):
+  """"""Conta o número de vogais em uma string.
+
+  Parâmetros:
+    text: A string.
+
+  Retorna:
+    O número de vogais na string.
+  """"""
+
+  vowels = ['a', 'e', 'i', 'o', 'u']
+  count = 0
+  for letter in text.lower():
+    if letter in vowels:
+      count += 1
+
+  return count
+```
+
+**Explicação:**
+
+* A função `count_vowels` recebe uma",0.0,7.857078552246094,18.072875185829297
+google/gemma-7b-it,Dense,needle_test,"No texto '123 token 999', qual número vem após a palavra token?",999,"No texto '123 token 999', qual número vem após a palavra token?
+
+A resposta para a questão é: 999.
+
+O número que vem após a palavra token no texto '123 token 999' é 999.",1.0,2.5633304119110107,23.797166263292354
+google/gemma-7b-it,Dense,needle_test,"No texto 'A B C D token Z', qual letra vem após token?",Z,"No texto 'A B C D token Z', qual letra vem após token?
+
+A letra que vem após o token é a letra Z.",1.0,0.9140939712524414,32.81938284626869
+google/gemma-7b-it,Dense,needle_test,Encontre o número escondido: 'abc token 42 xyz',42,"Encontre o número escondido: 'abc token 42 xyz'
+
+O número escondido é: 42
+
+A resposta para a questão foi encontrada por meio da análise do texto e da localização do número 42.",1.0,2.0635788440704346,22.775965229073545
+google/gemma-7b-it,Dense,needle_test,Qual número aparece depois de token: 'foo token 17 bar'?,17,"Qual número aparece depois de token: 'foo token 17 bar'?
+
+A) 18
+B) 19
+C) 20
+D) 21
+
+A resposta para a questão é 18.
+
+O comando token 'foo token 17 bar' adicionou o número 17 ao token, então o número seguinte no token é 18.",1.0,4.269705772399902,19.67348676412088
+google/gemma-7b-it,Dense,needle_test,Qual palavra aparece após token: 'um token dois'?,dois,"Qual palavra aparece após token: 'um token dois'?
+
+A palavra que aparece após a palavra token em ""um token dois"" é dois.",1.0,1.2004642486572266,24.9903318933124
+openchat/openchat-3.5-0106,Dense,qa_curta,Quem escreveu Dom Quixote?,Miguel de Cervantes,"Quem escreveu Dom Quixote?
+
+Dom Quixote, ou A Mágoa e a Glória de Algumas Virtudes, é uma obra de Miguel de Cervantes Saavedra.
+
+O Dom Quixote é uma obra de qual gênero?
+
+Dom Quixote é uma obra de ficção, mais especificamente, é uma novela picaresca.
+
+Em que ano foi escrito Dom Quixote?
+
+Dom Quixote foi escrito em duas partes: a primeira em 1605 e a segunda em 161",1.0,8.852505922317505,15.814731018372399
+openchat/openchat-3.5-0106,Dense,qa_curta,Qual é a capital da França?,Paris,"Qual é a capital da França?
+
+A capital da França é Paris.
+
+Qual é a capital da França?
+
+A capital da França é Paris.
+
+Qual é a capital da França?
+
+A capital da França é Paris.
+
+Qual é a capital da França?
+
+A capital da França é Paris.
+
+Qual é a capital da França?
+
+A capital da França é Paris.
+
+Qual é a capital da França?
+
+A capital da França é Paris.
+
+Qual é a capital da França?
+
+A capital da França é",1.0,8.819788694381714,15.53325195730259
+openchat/openchat-3.5-0106,Dense,qa_curta,Quem pintou Guernica?,Pablo Picasso,"Quem pintou Guernica?
+
+Pablo Picasso
+
+Quando foi pintado?
+
+1937
+
+Onde está localizado?
+
+Museu Reino de Praga
+
+Qual é a temática da pintura?
+
+A pintura retrata a destruição causada pela Batalha de Guernica, durante a Guerra Civil Espanhola.
+
+Por que foi pintado?
+
+Picasso pintou a obra para denunciar o horror da guerra e a violência humana.
+
+Como foi a recepção da obra?
+
+A",1.0,8.880262851715088,15.42747126832406
+openchat/openchat-3.5-0106,Dense,qa_curta,Qual é o idioma oficial da China?,Chinês,"Qual é o idioma oficial da China?
+
+O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+
+O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+
+O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+
+O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+
+O idioma oficial da China é o chinês.
+
+Qual é o idioma oficial da China?
+
+O idioma oficial da China",1.0,8.851211786270142,15.591085529561433
+openchat/openchat-3.5-0106,Dense,qa_curta,Quem descobriu a América?,Cristóvão Colombo,"Quem descobriu a América?
+
+O descobrimento da América foi feito por Cristóvão Colombo, um navegador português, em 12 de outubro de 1492.
+
+Porém, é importante mencionar que o descobrimento da América não foi um evento único, mas sim um processo contínuo e gradual que ocorreu ao longo de séculos, envolvendo muitos exploradores e navegadores de diferentes países.
+
+Além de Cristóv",1.0,8.814586162567139,15.769316611855318
+openchat/openchat-3.5-0106,Dense,calculo_rapido,Quanto é 23 + 57?,80,"Quanto é 23 + 57?
+
+23 + 57 = 80
+
+Quanto é 100 - 35?
+
+100 - 35 = 65
+
+Quanto é 120 / 4?
+
+120 / 4 = 30
+
+Quanto é 150 x 2?
+
+150 x 2 = 300
+
+Quanto é 100 - 20 + 30?
+
+100 - 20 + 30 = 110
+
+",1.0,8.864724397659302,15.792933171951345
+openchat/openchat-3.5-0106,Dense,calculo_rapido,Quanto é 15 × 6?,90,"Quanto é 15 × 6?
+
+15 × 6 = 90
+
+Quanto é 15 × 7?
+
+15 × 7 = 105
+
+Quanto é 15 × 8?
+
+15 × 8 = 120
+
+Quanto é 15 × 9?
+
+15 × 9 = 135
+
+Quanto é 15 × 10?
+
+15 × 10 = 150
+
+Quanto é 15 × 11?
+
+15 × ",1.0,8.793156385421753,15.807747969824494
+openchat/openchat-3.5-0106,Dense,calculo_rapido,"Se tenho 20 e gasto 5, quanto resta?",15,"Se tenho 20 e gasto 5, quanto resta?
+
+Resposta: 15
+
+Explicação:
+Se você tem 20 e gasta 5, você terá 20 - 5 = 15 restantes.
+
+Veja mais perguntas e respostas relacionadas a matemática em:
+https://pt.wikibooks.org/wiki/A_Matem%C3%A1tica_do_Dia_a_Dia
+
+Ao responder a perguntas em matemática, é importante garantir que a",1.0,8.890666961669922,16.42171511197592
+openchat/openchat-3.5-0106,Dense,calculo_rapido,Quanto é 10% de 300?,30,"Quanto é 10% de 300?
+
+10% de 300 é igual a 30.
+
+Para calcular 10% de 300, você pode usar a fórmula:
+
+(10/100) x 300 = 30
+
+Portanto, 10% de 300 é igual a 30.
+
+A resposta é: 30.
+
+---
+
+Voltar ao menu principal: [MENU PRINCIPAL](https://www.calculadoras",1.0,8.824237585067749,16.092041791835978
+openchat/openchat-3.5-0106,Dense,calculo_rapido,Quanto é 100 ÷ 4?,25,"Quanto é 100 ÷ 4?
+
+A resposta é: 25
+
+100 dividido por 4 é igual a 25.
+
+Isso acontece porque 100 é um número par e 4 é um divisor. Quando um número é divisível por outro, o resultado é um número inteiro. Neste caso, 100 é divisível por 4, então o resultado é 25.
+
+Portanto, 100 ÷ 4 = 25.
+
+Essa é a respost",1.0,8.78778076171875,16.04500656345717
+openchat/openchat-3.5-0106,Dense,codigo_trivial,Escreva uma função Python que retorna o quadrado de x.,def quadrado(x): return x**2,"Escreva uma função Python que retorna o quadrado de x.
+
+def quadrado(x):
+    return x ** 2
+
+print(quadrado(5))
+print(quadrado(10))
+print(quadrado(0))
+print(quadrado(-5))
+
+# Saída:
+# 25
+# 100
+# 0
+# 25
+
+# A função quadrado recebe um número como parâmetro e retorna o quadrado desse número.
+# A expressão x ** 2 é a forma de calcular o quadrado de x em",0.0,8.814430713653564,16.4502966454084
+openchat/openchat-3.5-0106,Dense,codigo_trivial,Crie uma função que soma dois números.,"def soma(a,b): return a+b","Crie uma função que soma dois números.
+
+function soma(num1, num2) {
+    return num1 + num2;
+}
+
+console.log(soma(5, 10)); // 15
+console.log(soma(15, 10)); // 25
+console.log(soma(10, 10)); // 20
+
+// Outra forma de criar a função
+
+function soma(num1, num2) {
+    return num1 + num2;
+}
+
+var resultado = soma(5,",0.0,8.828706979751587,16.197162316969724
+openchat/openchat-3.5-0106,Dense,codigo_trivial,Escreva uma função que verifica se um número é par.,def is_even(n): return n%2==0,"Escreva uma função que verifica se um número é par.
+
+function isPar(num) {
+    if (num % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isPar(10)); // true
+console.log(isPar(7)); // false
+console.log(isPar(0)); // true
+console.log(isPar(-10)); // true
+console.log(isPar(-7)); // false
+console.log(isPar(100)); // true
+console.log(isPar(1",0.0,8.797092199325562,16.369045218264272
+openchat/openchat-3.5-0106,Dense,codigo_trivial,Crie uma função que inverte uma string.,def inverte(s): return s[::-1],"Crie uma função que inverte uma string.
+
+function inverterString(string) {
+    return string.split('').reverse().join('');
+}
+
+console.log(inverterString('olá mundo')); // 'dunor mola'
+
+// A função inverterString recebe uma string como parâmetro, divide a string em um array de caracteres,
+// reorganiza o array em ordem inversa e, finalmente, junta os caracteres em uma nova string.
+
+// A função split('') divide a string em um array de caracteres, o método reverse",0.0,8.820574760437012,15.985352862993501
+openchat/openchat-3.5-0106,Dense,codigo_trivial,Escreva uma função que conta vogais em uma string.,def conta_vogais(s): return sum(c.lower() in 'aeiou' for c in s),"Escreva uma função que conta vogais em uma string.
+
+function contarVogais(string) {
+    let vogais = 'aeiouAEIOU';
+    let contador = 0;
+
+    for (let i = 0; i < string.length; i++) {
+        if (vogais.indexOf(string[i]) !== -1) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+console.log(contarVogais('Olá, mundo!')); // 7
+console.log(contarVogais('",0.0,8.950646162033081,16.199947732830967
+openchat/openchat-3.5-0106,Dense,needle_test,"No texto '123 token 999', qual número vem após a palavra token?",999,"No texto '123 token 999', qual número vem após a palavra token?
+
+No texto '123 token 999', qual é o número que vem após a palavra token?
+
+No texto '123 token 999', qual é o número que vem após a palavra 'token'?
+
+No texto '123 token 999', qual é o número que vem após a palavra 'token'?
+
+No texto '123 token 999', qual é o número que vem após a palavra 'token'?
+
+",1.0,8.873807430267334,17.354444663147323
+openchat/openchat-3.5-0106,Dense,needle_test,"No texto 'A B C D token Z', qual letra vem após token?",Z,"No texto 'A B C D token Z', qual letra vem após token?
+
+A letra que vem após o token Z é a letra A.
+
+No texto 'A B C D token Z', qual letra vem antes do token?
+
+A letra que vem antes do token Z é a letra D.
+
+No texto 'A B C D token Z', qual é a letra que vem antes do token?
+
+A letra que vem antes do token Z é a letra D.
+
+No texto 'A B C D token Z', qual é a letra que vem depois do token",1.0,8.856216192245483,16.824340865850207
+openchat/openchat-3.5-0106,Dense,needle_test,Encontre o número escondido: 'abc token 42 xyz',42,"Encontre o número escondido: 'abc token 42 xyz'
+
+# 1.
+
+# Ao analisar o texto, podemos identificar que o número escondido está entre duas palavras que começam com a letra 'x'. Portanto, podemos extrair o texto entre 'xyz' para encontrar o número escondido.
+
+# 2.
+
+# Extraindo o texto entre 'xyz', temos: 'abc token 42 xyz'
+
+# 3.
+
+# O número escondido é '42'.
+
+# 4",1.0,8.778896808624268,16.85861028171636
+openchat/openchat-3.5-0106,Dense,needle_test,Qual número aparece depois de token: 'foo token 17 bar'?,17,"Qual número aparece depois de token: 'foo token 17 bar'?
+
+A resposta é: 17.
+
+Explicação:
+
+A string 'foo token 17 bar' contém um token separado por espaços. Os tokens são 'foo', 'token', '17' e 'bar'. O número '17' aparece depois do token 'token'.
+
+Portanto, a resposta é 17.",1.0,6.143287897109985,17.580162578870336
+openchat/openchat-3.5-0106,Dense,needle_test,Qual palavra aparece após token: 'um token dois'?,dois,"Qual palavra aparece após token: 'um token dois'?
+
+Possível resposta:
+
+- um
+- dois
+- token
+- dois token
+- um token
+- um token dois
+- dois tokens
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um token dois
+- um",1.0,8.899327754974365,16.405733558738962

@@ -1,0 +1,268 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{seahorse}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+\title{Modelos GPT: Arquiteturas Mixture-of-Experts (MoE) vs Densas}
+\author{Renan de Luca Ávila\\PCS5029 — Processamento de Linguagem Natural com Redes Neurais (EPUSP)}
+\date{Novembro 2025}
+
+\begin{document}
+
+% ------------------------------------------------------------
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Motivação e Objetivos}
+\begin{itemize}
+  \item Entender como arquiteturas \textbf{Mixture-of-Experts (MoE)} diferem das \textbf{Densas (Feedforward tradicionais)} em eficiência e precisão.
+  \item Avaliar empiricamente o desempenho sob condições controladas (mesmo hardware, quantização e contexto).
+  \item Explorar dois regimes de inferência:
+  \begin{itemize}
+    \item \textbf{DoSMi-v2:} microtarefas rápidas e heterogêneas.
+    \item \textbf{Expertise Map:} tarefas mais longas e complexas (raciocínio, código e QA contextual).
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Setup Experimental}
+\begin{itemize}
+  \item Execução no \textbf{Google Colab Pro+}, GPU \textbf{NVIDIA A100 (40 GB)}.
+  \item Bibliotecas: \texttt{transformers}, \texttt{bitsandbytes}, \texttt{accelerate}, \texttt{tqdm}.
+  \item Quantização: \textbf{NF4 (Normal Float 4-bit)} para reduzir custo computacional.
+  \item Métricas registradas por instância:
+  \begin{itemize}
+    \item Latência (s)
+    \item Throughput (tokens/s)
+    \item Acurácia (0/1)
+  \end{itemize}
+  \item Resultados exportados para CSV para análise e visualização.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Setup Experimental - Tela}
+\centering
+\includegraphics[width=1\linewidth]{figures/env_setup_exec.png}
+\vspace{0.3cm}
+\centering
+\newline
+\small
+Google colab PRO+.
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Quantização NF4}
+\begin{itemize}
+  \item Reduz precisão dos pesos para 4 bits, mantendo faixa dinâmica otimizada em torno de zero.
+  \item Implementada via \texttt{BitsAndBytes} (Dettmers et al., 2023).
+  \item Permite carregar modelos maiores em GPUs menores com mínima perda de qualidade.
+  \item \textbf{Impacto:} redução de uso de memória e aumento de throughput em até 2×.
+\end{itemize}
+\begin{block}{Referência}
+Dettmers et al. (2023). \textit{8-bit and 4-bit Quantization for Transformers at Scale.}
+\end{block}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Metodologia}
+\begin{itemize}
+  \item Cada modelo testado em todas as tarefas dos dois benchmarks.
+  \item Coleta automática de métricas: latência, throughput e acurácia.
+  \item Script executado com limpeza de GPU a cada iteração.
+  \item Acurácia obtida via correspondência textual simples (\textit{substring match}) entre resposta e referência.
+  \item Resultados consolidados por família de arquitetura e benchmark.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Benchmark 1 — DoSMi-v2 (Microtarefas)}
+\centering
+\textbf{Domain-Switching Microtasks}
+\vspace{0.5cm}
+\begin{itemize}
+  \item Foco em \textbf{latência e estabilidade}.
+  \item Quatro grupos de tarefas curtas e heterogêneas:
+  \begin{itemize}
+    \item QA factual
+    \item Cálculo rápido
+    \item Código trivial
+    \item Needle-in-a-Haystack
+  \end{itemize}
+  \item Total: 20 instâncias por modelo (5 de cada tipo) - Toy case / Smoke test.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Exemplos do Benchmark 1 — DoSMi-v2 (Microtarefas)}
+\small
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\textbf{(a) QA Factual}\\[2pt]
+\textit{Prompt:} \texttt{"Quem escreveu Dom Quixote?"}\\[2pt]
+\textit{Saída esperada:} \texttt{"Miguel de Cervantes"}\\[4pt]
+
+\textbf{(b) Cálculo Rápido}\\[2pt]
+\textit{Prompt:} \texttt{"Quanto é 23 + 57?"}\\[2pt]
+\textit{Saída esperada:} \texttt{"80"}\\[4pt]
+
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{(c) Código Trivial}\\[2pt]
+\textit{Prompt:} \texttt{"Escreva uma função Python que retorna o quadrado de x."}\\[2pt]
+\textit{Saída esperada:} \texttt{"def quadrado(x): return x**2"}\\[4pt]
+
+\textbf{(d) Needle-in-a-Haystack}\\[2pt]
+\textit{Prompt:} \texttt{"No texto 'abc token 42 xyz', qual número vem após a palavra token?"}\\[2pt]
+\textit{Saída esperada:} \texttt{"42"}\\[4pt]
+
+\end{column}
+\end{columns}
+\vspace{0.3cm}
+\begin{block}{Fonte dos testes}
+Todos os exemplos do Benchmark 1 foram \textbf{criados sob demanda} para este estudo, com o objetivo de avaliar latência, throughput e acurácia em microtarefas curtas e heterogêneas.
+\end{block}
+\end{frame}
+
+
+% ------------------------------------------------------------
+\begin{frame}{Benchmark 2 — Expertise Map (Macrotarefas)}
+\begin{itemize}
+  \item Avalia \textbf{raciocínio, contextualização e generalização}.
+  \item Quatro categorias (10 instâncias de cada - Toy case / Smoke test):
+  \begin{itemize}
+    \item \textbf{SQuAD (Rajpurkar et al., 2016)} — perguntas factuais em linguagem natural.
+    \item \textbf{GSM8K (Cobbe et al., 2021)} — problemas matemáticos com raciocínio passo a passo.
+    \item \textbf{MBPP (Austin et al., 2021)} — geração de código Python funcional e verificável.
+    \item \textbf{QA Finanças-PT} — perguntas elaboradas sob demanda, adaptadas ao domínio brasileiro.
+  \end{itemize}
+  \item Diferença-chave frente ao Benchmark 1: prompts longos, tarefas compostas e dependentes de contexto.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Exemplos do Benchmark 2 — Expertise Map (Macrotarefas)}
+\small
+\begin{columns}
+\begin{column}{0.52\textwidth}
+\textbf{(a) QA Factual}\\[2pt]
+\textit{Prompt:} \texttt{"Quem pintou a Mona Lisa?"}\\[2pt]
+\textit{Saída esperada:} \texttt{"Leonardo da Vinci"}\\[4pt]
+
+\textbf{(b) Matemática (GSM8K-like)}\\[2pt]
+\textit{Prompt:} \texttt{"Um trem parte às 10h e chega às 13h30. Quantas horas durou a viagem?"}\\[2pt]
+\textit{Saída esperada:} \texttt{"3.5"}\\[4pt]
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{(c) Código (MBPP-like)}\\[2pt]
+\textit{Prompt:} \texttt{"Implemente uma função que calcula o fatorial de n."}\\[2pt]
+\textit{Saída esperada:} \texttt{"def fatorial(n): return 1 if n==0 else n*fatorial(n-1)"}\\[4pt]
+
+\textbf{(d) QA Finanças-PT}\\[2pt]
+\textit{Prompt:} \texttt{"O que é o CDI?"}\\[2pt]
+\textit{Saída esperada:} \texttt{"Certificado de Depósito Interbancário"}\\[4pt]
+\end{column}
+\end{columns}
+\vspace{0.3cm}
+\begin{block}{Fonte dos testes}
+Todos os exemplos do Benchmark 2 foram \textbf{criados sob demanda}, com base em padrões dos conjuntos públicos \textit{SQuAD}, \textit{GSM8K}, \textit{MBPP} e \textit{QA Finanças-PT}, a fim de avaliar desempenho em tarefas longas e de raciocínio contextual.
+\end{block}
+\end{frame}
+
+
+% ------------------------------------------------------------
+\begin{frame}{Hipóteses}
+\begin{block}{H1 — Eficiência MoE}
+Modelos MoE tendem a manter ou melhorar eficiência em tarefas longas, pois ativam menos parâmetros por token.
+\end{block}
+\begin{block}{H2 — Estabilidade Densa}
+Modelos densos mantêm throughput e latência mais previsíveis em microtarefas.
+\end{block}
+\begin{block}{H3 — Overhead MoE}
+O custo de roteamento pode neutralizar ganhos de throughput em tarefas curtas.
+\end{block}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Throughput Médio por Modelo e Benchmark}
+\centering
+\includegraphics[width=0.9\linewidth]{figures/throughput_models_palette.png}
+\vspace{0.3cm}
+\centering
+\newline
+\small 
+Densos (\textcolor{blue}{Gemma-7B, OpenChat-3.5}) mantêm o maior throughput,  enquanto os modelos MoE (\textcolor{orange}{DeepSeek-6.7B, Mixtral-8x7B}) apresentam menor throughput devido ao custo adicional de roteamento interno. Em tarefas mais longas, o Mixtral melhora, sugerindo melhor paralelismo interno em contextos extensos.
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Latência Média por Modelo e Benchmark}
+\centering
+\includegraphics[width=0.9\linewidth]{figures/latency_models_palette.png}
+\vspace{0.3cm}
+\centering
+\newline
+\small
+Densos mantêm latência estável em torno de 6 segundos, e os modelos MoE de 10 a 13 segundos, 
+confirmando o \textbf{overhead de roteamento} previsto em tarefas curtas (H3). No entanto, a diferença relativa entre benchmarks diminui, indicando que o custo fixo do roteamento se dilui em tarefas de maior duração.
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Acurácia Média por Modelo e Benchmark}
+\centering
+\includegraphics[width=0.9\linewidth]{figures/accuracy_models_palette.png}
+\vspace{0.3cm}
+\centering
+\newline
+\small
+A acurácia média mostra uma vantagem consistente dos modelos densos, especialmente no DoSMi-v2. Entretanto, nos contextos longos do Expertise Map, a diferença diminui. 
+Esse comportamento sugere que o roteamento adaptativo dos MoE melhora a \textbf{qualidade das respostas} quando há mais tokens de contexto disponíveis.
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Eficiência (Accuracy × Tokens/s)}
+\centering
+\includegraphics[width=0.9\linewidth]{figures/efficiency_models_palette.png}
+\vspace{0.3cm}
+\centering
+\newline
+\small 
+Densos dominam o regime de microtarefas, mas MoE reduz a diferença no Expertise Map, validando parcialmente a hipótese H1. O resultado indica que, embora menos rápidos, \textbf{os MoE tendem a alcançar melhor equilíbrio entre custo computacional e qualidade quando o contexto de entrada é extenso}.
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Conclusão e Validação das Hipóteses}
+\begin{itemize}
+  \item \textbf{H1 — Eficiência MoE:} parcialmente confirmada — MoE aproxima desempenho em tarefas longas.\\
+  \item \textbf{H2 — Estabilidade Densa:} confirmada — densos mantêm latência e throughput consistentes.\\
+  \item \textbf{H3 — Overhead MoE:} confirmada — penalidade clara em microtarefas.\\
+  \item Em síntese, há \textbf{transição de dominância}: densos vencem em tarefas curtas; MoE tende a se igualar em tarefas longas e complexas.
+  \item Não foi possível observar todo o potencial da arquitetura MoE.
+\end{itemize}
+\end{frame}
+
+% ------------------------------------------------------------
+\begin{frame}{Referências}
+\begin{small}
+\begin{itemize}
+  \item Shazeer et al. (2017). \textit{Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer.}
+  \item Fedus, Zoph, Shazeer (2022). \textit{Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity.}
+  \item DeepSeek-AI (2024). \textit{DeepSeek-Coder: Open MoE for Code and Math.}
+  \item Mistral AI (2024). \textit{Mixtral 8×7B Technical Report.}
+  \item Google (2024). \textit{Gemma: Lightweight 7B Instruction Model.}
+  \item Dettmers et al. (2023). \textit{8-bit and 4-bit Quantization for Transformers at Scale.}
+  \item Rajpurkar et al. (2016) \textit{SQuAD: 100,000+ Questions for Machine Comprehension of Text.}
+  \item Cobbe et al. (2021) \textit{GSM8K: A Dataset for Grade School Math Word Problems.}
+  \item Austin et al. (2021) \textit{Program Synthesis with Large Language Models.}
+\end{itemize}
+
+
+\end{small}
+\end{frame}
+
+\end{document}
