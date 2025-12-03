@@ -51,9 +51,13 @@ async def _ingest_document(
 ) -> None:
     progress_label.text = f"Página 0/{doc['pages']}"
     status_label.text = "Processando"
+    loop = asyncio.get_running_loop()
 
     def _progress(page: int, total: int) -> None:
-        ui.run_later(lambda: setattr(progress_label, "text", f"Página {page}/{total}"))
+        def update() -> None:
+            progress_label.text = f"Página {page}/{total}"
+
+        loop.call_soon_threadsafe(update)
 
     def _task() -> None:
         pdf_ingestion.ingest_pdf(str(PDF_STORAGE / doc["storage_name"]), doc["doc_id"], progress_callback=_progress)
@@ -83,12 +87,12 @@ def _render_documents(
     refresh_callback: Callable[[], None],
 ) -> None:
     container.clear()
-    if not docs:
-        ui.label("Nenhum documento carregado ainda.").classes("text-gray-500").parent(container)
-        return
+    with container:
+        if not docs:
+            ui.label("Nenhum documento carregado ainda.").classes("text-gray-500")
+            return
 
-    for doc in docs:
-        with container:
+        for doc in docs:
             with ui.card().classes("w-full"):
                 ui.label(doc["filename"]).classes("text-lg font-semibold")
                 ui.label(f"Documento ID: {doc['doc_id']}").classes("text-sm text-gray-600")
@@ -140,18 +144,26 @@ def documents_page() -> None:
     with docs_container:
         ui.label("Gerenciamento de Documentos").classes("text-2xl font-semibold")
 
-        async def handle_upload(event: events.UploadEvent) -> None:
-            if not event.content:
+        async def handle_upload(event: events.UploadEventArguments) -> None:
+            file = getattr(event, "file", None)
+            if file is None:
+                ui.notify("Falha ao receber arquivo.", type="negative")
                 return
-            data = event.content.read()
+
             doc_id = uuid.uuid4().hex[:8]
-            storage_name = f"{doc_id}_{event.name}"
+            storage_name = f"{doc_id}_{file.name}"
             pdf_path = PDF_STORAGE / storage_name
-            pdf_path.write_bytes(data)
+
+            try:
+                await file.save(pdf_path)
+            except Exception as exc:
+                ui.notify(f"Erro ao salvar arquivo: {exc}", type="negative")
+                return
+
             pages = _count_pages(pdf_path)
             entry = {
                 "doc_id": doc_id,
-                "filename": event.name,
+                "filename": file.name,
                 "storage_name": storage_name,
                 "pages": pages,
                 "status": "Não ingerido",
@@ -161,7 +173,7 @@ def documents_page() -> None:
             docs_list.append(entry)
             _save_documents(docs_list)
             refresh_docs()
-            ui.notify(f"Documento {event.name} carregado com sucesso.")
+            ui.notify(f"Documento {file.name} carregado com sucesso.")
 
         ui.upload(label="Enviar PDF", on_upload=handle_upload).props("accept=.pdf")
 

@@ -23,7 +23,7 @@ except Exception:  # broad to keep ingestion operational
         )
         return []
 
-try:  # embeddings/vectordb may not exist yet
+try:
     from . import embeddings as embeddings_module
 except Exception:  # pragma: no cover
     embeddings_module = None
@@ -56,33 +56,6 @@ def _store_page_text(doc_id: str, page_number: int, text: str) -> None:
         path.write_text(text, encoding="utf-8")
     except OSError as exc:
         LOGGER.error("Failed to persist text for doc=%s page=%s: %s", doc_id, page_number, exc)
-
-
-def _get_embedding_fn() -> Optional[Callable[[Sequence[str]], Sequence[Sequence[float]]]]:
-    if embeddings_module is None:
-        return None
-    for attr in ("embed_documents", "embed_texts", "encode"):
-        fn = getattr(embeddings_module, attr, None)
-        if callable(fn):
-            return fn
-    return None
-
-
-def _get_upsert_fn() -> Optional[Callable[[Iterable[dict], Sequence[Sequence[float]]], None]]:
-    if vectordb_module is None:
-        return None
-    for attr in ("upsert", "add_documents", "add"):
-        fn = getattr(vectordb_module, attr, None)
-        if callable(fn):
-            return fn
-    store = getattr(vectordb_module, "get_vector_store", None)
-    if callable(store):
-        client = store()
-        for attr in ("upsert", "add_documents", "add"):
-            fn = getattr(client, attr, None)
-            if callable(fn):
-                return fn
-    return None
 
 
 def _process_page_text(
@@ -126,10 +99,8 @@ def _push_to_vector_store(
         LOGGER.exception("Failed to embed %s chunks: %s", len(chunks), exc)
         return
 
-    payload = [chunk.get("metadata", {}) for chunk in chunks]
-
     try:
-        upsert_fn(payload, vectors)
+        upsert_fn(chunks, vectors)
     except Exception as exc:
         LOGGER.exception("Failed to upsert %s chunks to vector DB: %s", len(chunks), exc)
 
@@ -146,8 +117,8 @@ def ingest_pdf(
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
     all_chunks: List[dict] = []
-    embedding_fn = _get_embedding_fn()
-    upsert_fn = _get_upsert_fn()
+    embedding_fn = getattr(embeddings_module, "embed_text_list", None) if embeddings_module else None
+    upsert_fn = getattr(vectordb_module, "add_chunks", None) if vectordb_module else None
 
     try:
         doc = fitz.open(pdf_path)

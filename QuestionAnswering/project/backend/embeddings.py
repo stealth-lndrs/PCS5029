@@ -49,7 +49,11 @@ def _load_model(model_name: str = DEFAULT_MODEL_NAME) -> SentenceTransformer:
 
 
 def _to_float_list(vectors: Sequence[Sequence[float]]) -> List[List[float]]:
-    if not vectors:
+    try:
+        is_empty = len(vectors) == 0  # handles python lists and numpy arrays
+    except TypeError:
+        is_empty = False
+    if is_empty:
         return []
     return np.asarray(vectors, dtype=TARGET_DTYPE).tolist()
 

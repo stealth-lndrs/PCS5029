@@ -66,17 +66,17 @@ def _layout(active_page: str, content: Callable[[], None]) -> None:
         content()
 
 
+@ui.page("/")
+async def _chat_page() -> None:
+    _layout("chat", chat_ui.chat_page)
+
+
+@ui.page("/documents")
+async def _documents_page() -> None:
+    _layout("documents", documents_ui.documents_page)
+
+
 def register_routes() -> None:
-    @ui.page("/")
-    def _chat_page() -> None:
-        def _content() -> None:
-            chat_ui.chat_page()
-
-        _layout("chat", _content)
-
-    @ui.page("/documents")
-    def _documents_page() -> None:
-        def _content() -> None:
-            documents_ui.documents_page()
-
-        _layout("documents", _content)
+    # routes are registered via decorators when the module is imported.
+    # function kept for backward compatibility with existing imports.
+    return None

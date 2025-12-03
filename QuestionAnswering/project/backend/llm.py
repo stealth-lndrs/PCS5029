@@ -25,35 +25,93 @@ from transformers import (
 LOGGER = logging.getLogger(__name__)
 
 MODEL_NAME = os.getenv("LLM_MODEL_NAME", "google/gemma-2-9b-it")
+FALLBACK_MODEL_NAME = os.getenv("LLM_FALLBACK_MODEL_NAME")
 BACKEND = os.getenv("LLM_BACKEND", "transformers").lower()
 VLLM_BASE_URL = os.getenv("VLLM_BASE_URL", "http://localhost:8000")
+ENABLE_4BIT = os.getenv("LLM_ENABLE_4BIT", "1").lower() in {"1", "true", "yes"}
 
 _tokenizer: Optional[AutoTokenizer] = None
 _model: Optional[AutoModelForCausalLM] = None
+_loaded_model_name: Optional[str] = None
+
+
+def _bitsandbytes_available() -> bool:
+    try:
+        import bitsandbytes  # noqa: F401
+    except ImportError:
+        LOGGER.warning("bitsandbytes not installed; falling back to full-precision Gemma.")
+        return False
+    try:
+        import triton.ops  # type: ignore  # noqa: F401
+    except Exception:
+        LOGGER.warning("Triton ops unavailable; can't load Gemma in 4-bit. Falling back to fp16.")
+        return False
+    return True
+
+
+def _candidate_models() -> Iterable[tuple[str, bool]]:
+    seen = set()
+    candidates = []
+    candidates.append((MODEL_NAME, ENABLE_4BIT))
+    if ENABLE_4BIT:
+        candidates.append((MODEL_NAME, False))
+    if FALLBACK_MODEL_NAME and FALLBACK_MODEL_NAME != MODEL_NAME:
+        candidates.append((FALLBACK_MODEL_NAME, False))
+    for name, use_4bit in candidates:
+        key = (name, use_4bit)
+        if key in seen:
+            continue
+        seen.add(key)
+        yield name, use_4bit
+
+
+def _load_transformer_pair(model_name: str, use_4bit: bool) -> tuple[AutoTokenizer, AutoModelForCausalLM]:
+    LOGGER.info("Loading %s (4bit=%s)", model_name, use_4bit)
+    quant_config = None
+    if use_4bit:
+        if not _bitsandbytes_available():
+            raise RuntimeError("bitsandbytes / triton not available for 4-bit mode.")
+        quant_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_quant_type="nf4",
+        )
+    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    model_kwargs = {
+        "torch_dtype": torch.float16,
+        "device_map": "auto",
+    }
+    if quant_config is not None:
+        model_kwargs["quantization_config"] = quant_config
+    model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
+    model.eval()
+    return tokenizer, model
 
 
 def _ensure_transformers_model() -> None:
-    global _tokenizer, _model
+    global _tokenizer, _model, _loaded_model_name
     if _tokenizer is not None and _model is not None:
         return
 
-    LOGGER.info("Loading Gemma model %s in 4-bit mode via transformers.", MODEL_NAME)
-    quant_config = BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_compute_dtype=torch.float16,
-        bnb_4bit_use_double_quant=True,
-        bnb_4bit_quant_type="nf4",
-    )
-    _tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
-    if _tokenizer.pad_token is None:
-        _tokenizer.pad_token = _tokenizer.eos_token
-    _model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME,
-        torch_dtype=torch.float16,
-        device_map="auto",
-        quantization_config=quant_config,
-    )
-    _model.eval()
+    last_exc: Optional[Exception] = None
+    for name, use_4bit in _candidate_models():
+        try:
+            tokenizer, model = _load_transformer_pair(name, use_4bit)
+            _tokenizer, _model = tokenizer, model
+            _loaded_model_name = name
+            LOGGER.info("Successfully loaded %s (4bit=%s)", name, use_4bit)
+            return
+        except Exception as exc:  # pragma: no cover - hardware-dependent
+            last_exc = exc
+            LOGGER.warning("Failed to load %s (4bit=%s): %s", name, use_4bit, exc)
+            if torch.cuda.is_available():
+                with torch.cuda.device(0):
+                    torch.cuda.empty_cache()
+            continue
+    raise RuntimeError("Unable to load any LLM candidate.") from last_exc
 
 
 def _ensure_requests() -> None:

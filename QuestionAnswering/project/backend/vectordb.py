@@ -113,14 +113,14 @@ def search(
         return []
 
     collection = _ensure_collection()
-    where = filters or {}
+    where = filters if filters else None
 
     try:
         results = collection.query(
             query_embeddings=[query_embedding],
             n_results=k,
             where=where,
-            include=["metadatas", "documents", "distances", "ids"],
+            include=["metadatas", "documents", "distances"],
         )
     except Exception as exc:
         LOGGER.exception("Vector search failed: %s", exc)
